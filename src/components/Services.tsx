@@ -1,0 +1,118 @@
+import { ArrowRight } from "lucide-react";
+
+const Services = () => {
+  const symptoms = [
+    "Pain during urination",
+    "Weak or slow urine stream",
+    "Spraying or dribbling urine stream",
+    "Difficulty emptying the bladder",
+    "Frequent UTIs",
+    "Blood in urine",
+    "Straining when urinating",
+    "Erectile dysfunction",
+  ];
+
+  const specialties = [
+    {
+      title: "Urethral Strictures",
+      treatments: ["Urethroplasty", "Optilume"],
+      description: "Advanced surgical repair of urethral narrowing",
+    },
+    {
+      title: "Erectile Dysfunction",
+      treatments: ["Inflatable Penile Prosthesis", "Penile Rehabilitation"],
+      description: "Comprehensive ED treatment including post-prostatectomy care",
+    },
+    {
+      title: "Post-Surgical Incontinence",
+      treatments: ["Surgical correction", "Rehabilitation programs"],
+      description: "Treatment for urinary incontinence after prostate surgery",
+    },
+  ];
+
+  const otherServices = [
+    "Vasectomy",
+    "Circumcision",
+    "Peyronie's Disease",
+    "Benign Prostatic Hyperplasia (Urolift)",
+  ];
+
+  return (
+    <section id="services" className="py-24 lg:py-32 bg-navy-dark">
+      <div className="container mx-auto px-4 md:px-8">
+        {/* Header */}
+        <div className="text-center mb-16 animate-fade-in-up">
+          <p className="text-teal-light text-sm tracking-[0.3em] uppercase mb-4 font-medium">
+            Treatment Options
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-primary-foreground mb-6">
+            Our Services
+          </h2>
+          <p className="text-primary-foreground/70 max-w-2xl mx-auto text-lg">
+            If you're experiencing any of these symptoms, don't ignore them. 
+            Take the first step towards better health.
+          </p>
+        </div>
+
+        {/* Symptoms Grid */}
+        <div className="mb-20">
+          <h3 className="text-xl font-serif text-teal-light mb-8 text-center">Common Symptoms We Treat</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {symptoms.map((symptom, index) => (
+              <div
+                key={symptom}
+                className="group bg-navy-light/30 backdrop-blur-sm border border-primary-foreground/10 rounded-xl p-4 text-center hover:bg-teal/20 hover:border-teal/30 transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <p className="text-primary-foreground/90 text-sm font-medium">{symptom}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Main Specialties */}
+        <div id="specialties" className="mb-20">
+          <h3 className="text-xl font-serif text-teal-light mb-8 text-center">Main Specialty Areas</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {specialties.map((specialty, index) => (
+              <div
+                key={specialty.title}
+                className="group bg-card rounded-2xl p-8 shadow-elevated hover:shadow-card transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="h-1 w-16 bg-gradient-to-r from-teal to-navy mb-6 group-hover:w-24 transition-all duration-300" />
+                <h4 className="text-xl font-serif text-foreground mb-3">{specialty.title}</h4>
+                <p className="text-muted-foreground text-sm mb-4">{specialty.description}</p>
+                <ul className="space-y-2">
+                  {specialty.treatments.map((treatment) => (
+                    <li key={treatment} className="flex items-center text-sm text-foreground">
+                      <ArrowRight className="w-4 h-4 text-teal mr-2 flex-shrink-0" />
+                      {treatment}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Other Services */}
+        <div className="text-center animate-fade-in-up">
+          <h3 className="text-xl font-serif text-teal-light mb-8">Other Areas of Interest</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {otherServices.map((service) => (
+              <span
+                key={service}
+                className="px-6 py-3 bg-primary-foreground/10 border border-primary-foreground/20 rounded-full text-primary-foreground text-sm hover:bg-teal/20 hover:border-teal/40 transition-all duration-300 cursor-default"
+              >
+                {service}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
