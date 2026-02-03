@@ -1,4 +1,6 @@
 import { Award, GraduationCap, Heart, Shield } from "lucide-react";
+import drJustinChee from "@/assets/dr-justin-chee.jpg";
+
 const About = () => {
   const credentials = [{
     icon: GraduationCap,
@@ -48,18 +50,37 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right - Credentials Grid */}
-          <div className="grid grid-cols-2 gap-6">
-            {credentials.map((item, index) => <div key={item.title} className="group bg-card p-6 rounded-2xl shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 animate-fade-in-up" style={{
-            animationDelay: `${index * 0.1}s`
-          }}>
-                <div className="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-4 group-hover:bg-teal/20 transition-colors">
-                  <item.icon className="w-7 h-7 text-teal" />
-                </div>
-                <h3 className="font-serif text-lg text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </div>)}
+          {/* Right - Doctor Photo */}
+          <div className="relative animate-fade-in-up">
+            <div className="relative rounded-3xl overflow-hidden shadow-elevated">
+              <img 
+                src={drJustinChee} 
+                alt="Dr Justin Chee - Specialist Reconstructive Urologist" 
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
+            </div>
+            {/* Decorative elements */}
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-teal/20 rounded-2xl -z-10"></div>
+            <div className="absolute -top-4 -left-4 w-16 h-16 bg-navy/10 rounded-xl -z-10"></div>
           </div>
+        </div>
+
+        {/* Credentials Grid */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+          {credentials.map((item, index) => (
+            <div 
+              key={item.title} 
+              className="group bg-card p-6 rounded-2xl shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 animate-fade-in-up" 
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-4 group-hover:bg-teal/20 transition-colors">
+                <item.icon className="w-7 h-7 text-teal" />
+              </div>
+              <h3 className="font-serif text-lg text-foreground mb-2">{item.title}</h3>
+              <p className="text-sm text-muted-foreground">{item.description}</p>
+            </div>
+          ))}
         </div>
 
         {/* Location Info */}
@@ -79,8 +100,6 @@ const About = () => {
               <p className="text-sm text-teal uppercase tracking-wider mb-2">Email</p>
               <a href="mailto:reception@drjustinchee.com" className="text-foreground font-medium hover:text-teal transition-colors">
                 reception@drjustinchee.com
-
-
               </a>
               <p className="text-muted-foreground">www.drjustinchee.com</p>
             </div>
