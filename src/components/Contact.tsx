@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-24 lg:py-32 bg-gradient-subtle">
+  return <section id="contact" className="py-24 lg:py-32 bg-gradient-subtle">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left - CTA */}
@@ -50,7 +48,9 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium text-foreground mb-1">Email</h4>
                   <a href="mailto:reception@drjustinchee.com" className="text-muted-foreground hover:text-teal transition-colors">
-                    reception@drjustinchee.com
+                    reception@drjustinchee.com or our Urology Nurse at nurse@drjustinchee.com         
+ 
+      
                   </a>
                 </div>
               </div>
@@ -68,7 +68,9 @@ const Contact = () => {
           </div>
 
           {/* Right - Contact Card */}
-          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <div className="animate-fade-in-up" style={{
+          animationDelay: "0.2s"
+        }}>
             <div className="bg-card rounded-3xl shadow-elevated p-8 md:p-10">
               <h3 className="text-2xl font-serif text-foreground mb-6">Send an Enquiry</h3>
               
@@ -78,21 +80,13 @@ const Contact = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       First Name <span className="text-destructive">*</span>
                     </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all"
-                      required
-                    />
+                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" required />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Last Name <span className="text-destructive">*</span>
                     </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all"
-                      required
-                    />
+                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" required />
                   </div>
                 </div>
 
@@ -100,21 +94,14 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Email Address <span className="text-destructive">*</span>
                   </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all"
-                    required
-                  />
+                  <input type="email" className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" required />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Phone (optional)
                   </label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all"
-                  />
+                  <input type="tel" className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" />
                 </div>
 
                 <div>
@@ -133,10 +120,7 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Message (optional)
                   </label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all resize-none"
-                  />
+                  <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all resize-none" />
                 </div>
 
                 <Button variant="hero" size="xl" className="w-full group">
@@ -148,8 +132,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;

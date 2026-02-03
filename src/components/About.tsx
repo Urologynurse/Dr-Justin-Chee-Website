@@ -1,31 +1,23 @@
 import { Award, GraduationCap, Heart, Shield } from "lucide-react";
-
 const About = () => {
-  const credentials = [
-    {
-      icon: GraduationCap,
-      title: "Fellowship Trained",
-      description: "Advanced training in reconstructive urology",
-    },
-    {
-      icon: Award,
-      title: "Board Certified",
-      description: "Specialist urological surgeon",
-    },
-    {
-      icon: Shield,
-      title: "Evidence Based",
-      description: "Latest techniques and research",
-    },
-    {
-      icon: Heart,
-      title: "Patient Focused",
-      description: "Compassionate, personalized care",
-    },
-  ];
-
-  return (
-    <section id="about" className="py-24 lg:py-32 bg-gradient-subtle">
+  const credentials = [{
+    icon: GraduationCap,
+    title: "Fellowship Trained",
+    description: "Advanced training in reconstructive urology"
+  }, {
+    icon: Award,
+    title: "Board Certified",
+    description: "Specialist urological surgeon"
+  }, {
+    icon: Shield,
+    title: "Evidence Based",
+    description: "Latest techniques and research"
+  }, {
+    icon: Heart,
+    title: "Patient Focused",
+    description: "Compassionate, personalized care"
+  }];
+  return <section id="about" className="py-24 lg:py-32 bg-gradient-subtle">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -58,19 +50,15 @@ const About = () => {
 
           {/* Right - Credentials Grid */}
           <div className="grid grid-cols-2 gap-6">
-            {credentials.map((item, index) => (
-              <div
-                key={item.title}
-                className="group bg-card p-6 rounded-2xl shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {credentials.map((item, index) => <div key={item.title} className="group bg-card p-6 rounded-2xl shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 animate-fade-in-up" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="w-14 h-14 rounded-xl bg-teal/10 flex items-center justify-center mb-4 group-hover:bg-teal/20 transition-colors">
                   <item.icon className="w-7 h-7 text-teal" />
                 </div>
                 <h3 className="font-serif text-lg text-foreground mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
@@ -91,14 +79,14 @@ const About = () => {
               <p className="text-sm text-teal uppercase tracking-wider mb-2">Email</p>
               <a href="mailto:reception@drjustinchee.com" className="text-foreground font-medium hover:text-teal transition-colors">
                 reception@drjustinchee.com
+
+
               </a>
               <p className="text-muted-foreground">www.drjustinchee.com</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
