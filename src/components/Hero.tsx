@@ -9,7 +9,7 @@ const Hero = () => {
     }} />
 
       {/* Subtle Overlay for text readability */}
-      <div className="absolute inset-0 text-[#d0cafc] bg-[#0416b9]" />
+      <div className="absolute inset-0 text-[#d0cafc] bg-[#020d6f]" />
 
       {/* Animated Decorative Elements */}
       <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-teal/10 blur-3xl animate-float" />
