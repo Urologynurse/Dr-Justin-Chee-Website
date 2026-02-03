@@ -3,17 +3,16 @@ import { ChevronDown, Calendar, ArrowRight } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroBackground})`
-    }} />
+      {/* Calming Navy Blue to White Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-navy-dark via-navy to-primary-foreground/90" />
 
-      {/* Subtle Overlay for text readability */}
-      <div className="absolute inset-0 text-[#d0cafc] bg-[#020d6f]" />
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(var(--teal)/0.15)_0%,_transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(var(--primary-foreground)/0.3)_0%,_transparent_60%)]" />
 
       {/* Animated Decorative Elements */}
-      <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-teal/10 blur-3xl animate-float" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-navy/20 blur-3xl animate-float" style={{
+      <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-primary-foreground/10 blur-3xl animate-float" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-teal/10 blur-3xl animate-float" style={{
       animationDelay: "3s"
     }} />
 

@@ -26,13 +26,13 @@ const Header = () => {
   }];
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "glass shadow-soft py-3" : "bg-transparent py-5"}`}>
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between bg-[#f8f7f8]">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex flex-col">
-            <span className={`text-xl md:text-2xl tracking-[0.2em] font-light transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
-              DR JUSTIN<span className="font-semibold text-navy">CHEE</span>
+          <a href="#" className="flex flex-col group">
+            <span className={`text-xl md:text-2xl tracking-[0.2em] font-light transition-all duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'}`}>
+              DR JUSTIN<span className={`font-bold transition-colors duration-300 ${isScrolled ? 'text-navy' : 'text-teal-light'}`}>CHEE</span>
             </span>
-            <span className={`text-[10px] md:text-xs tracking-[0.25em] uppercase transition-colors duration-300 ${isScrolled ? 'text-muted-foreground' : 'text-primary-foreground/80'}`}>
+            <span className={`text-[10px] md:text-xs tracking-[0.25em] uppercase transition-all duration-300 ${isScrolled ? 'text-muted-foreground' : 'text-primary-foreground/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]'}`}>
               Reconstructive Urologist
             </span>
           </a>
