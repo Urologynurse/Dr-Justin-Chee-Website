@@ -61,7 +61,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
             </div>
             {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-teal/20 rounded-2xl -z-10"></div>
+            <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-teal/20 rounded-2xl -z-10"></div>
             <div className="absolute -top-4 -left-4 w-16 h-16 bg-navy/10 rounded-xl -z-10"></div>
           </div>
         </div>
