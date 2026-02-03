@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const Services = () => {
   const symptoms = [
-    "Pain during urination",
+    "Urethral Strictures",
     "Weak or slow urine stream",
     "Spraying or dribbling urine stream",
     "Difficulty emptying the bladder",
