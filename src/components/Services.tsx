@@ -33,7 +33,7 @@ const Services = () => {
     "Vasectomy",
     "Circumcision",
     "Peyronie's Disease",
-    "Benign Prostatic Hyperplasia (Urolift)",
+    "Inflatable Penile Prothesis",
   ];
 
   return (
