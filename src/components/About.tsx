@@ -21,17 +21,18 @@ const About = () => {
   }];
   return <section id="about" className="py-24 lg:py-32 bg-gradient-subtle">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
-          <div className="animate-fade-in-up">
-            <p className="text-teal text-sm tracking-[0.3em] uppercase mb-4 font-medium">
-              About Dr Chee
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-foreground mb-6 leading-tight">
-              Dedicated to Restoring
-              <span className="text-gradient block">Quality of Life</span>
-            </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+        <div className="animate-fade-in-up">
+          <p className="text-teal text-sm tracking-[0.3em] uppercase mb-4 font-medium">
+            About Dr Chee
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-foreground mb-6 leading-tight">
+            Dedicated to Restoring
+            <span className="text-gradient block">Quality of Life</span>
+          </h2>
+          
+          {/* Text with inline photo */}
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="space-y-4 text-muted-foreground leading-relaxed flex-1">
               <p>
                 Dr Justin Chee is a specialist reconstructive urologist based in East Melbourne, 
                 Victoria. With over two decades of experience, he is committed to providing 
@@ -48,21 +49,21 @@ const About = () => {
                 environment where patients feel heard and supported throughout their treatment journey.
               </p>
             </div>
-          </div>
-
-          {/* Right - Doctor Photo */}
-          <div className="relative animate-fade-in-up">
-            <div className="relative rounded-3xl overflow-hidden shadow-elevated">
-              <img 
-                src={drJustinChee} 
-                alt="Dr Justin Chee - Specialist Reconstructive Urologist" 
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
+            
+            {/* Smaller Photo on Right */}
+            <div className="relative w-48 md:w-56 flex-shrink-0">
+              <div className="relative rounded-2xl overflow-hidden shadow-elevated">
+                <img 
+                  src={drJustinChee} 
+                  alt="Dr Justin Chee - Specialist Reconstructive Urologist" 
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-teal/20 rounded-xl -z-10"></div>
+              <div className="absolute -top-2 -left-2 w-10 h-10 bg-navy/10 rounded-lg -z-10"></div>
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-teal/20 rounded-2xl -z-10"></div>
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-navy/10 rounded-xl -z-10"></div>
           </div>
         </div>
 
