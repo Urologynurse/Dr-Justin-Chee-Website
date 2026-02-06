@@ -34,7 +34,6 @@ const Services = () => {
     "Vasectomy",
     "Circumcisions",
     "Peyronie's Disease",
-    "Inflatable Penile Prosthesis",
   ];
 
   return (
