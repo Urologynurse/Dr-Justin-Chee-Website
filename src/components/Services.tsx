@@ -30,10 +30,11 @@ const Services = () => {
   ];
 
   const otherServices = [
-    "Penile Condition - Penile Cancer",
-    "Circumcision",
+    "Penile Conditions - Including Penile Cancer",
+    "Vasectomy",
+    "Circumcisions",
     "Peyronie's Disease",
-    "Inflatable Penile Prothesis",
+    "Inflatable Penile Prosthesis",
   ];
 
   return (
