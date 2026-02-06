@@ -48,7 +48,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium text-foreground mb-1">Email</h4>
                   <a href="mailto:reception@drjustinchee.com" className="text-muted-foreground hover:text-teal transition-colors">
-                    reception@drjustinchee.com or our Urology Nurse at nurse@drjustinchee.com         
+                    reception@drjustinchee.com or our urology nurse at nurse@drjustinchee.com         
  
       
                   </a>
