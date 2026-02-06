@@ -19,8 +19,8 @@ const Services = () => {
     },
     {
       title: "Erectile Dysfunction",
-      treatments: ["Inflatable Penile Prosthesis", "Penile Rehabilitation"],
-      description: "Comprehensive ED treatment including post-prostatectomy care",
+      treatments: [],
+      description: "Inflatable Penile Prosthesis (IPP) and Penile Rehabilitation post radical prostatectomy surgery and ICI therapy.",
     },
     {
       title: "Post-Surgical Incontinence",
