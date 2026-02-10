@@ -68,15 +68,6 @@ const Header = () => {
                     Patient Registration Form
                   </a>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <a
-                    href="mailto:reception@drjustinchee.com?subject=Patient Registration Form"
-                    className="flex items-center gap-2 cursor-pointer"
-                  >
-                    <Phone className="w-4 h-4" />
-                    Email Completed Form
-                  </a>
-                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Button variant={isScrolled ? "default" : "heroOutline"} size="lg" className="ml-4">
@@ -106,13 +97,6 @@ const Header = () => {
               >
                 <FileText className="w-4 h-4" />
                 Patient Registration Form
-              </a>
-              <a
-                href="mailto:reception@drjustinchee.com?subject=Patient Registration Form"
-                className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Email Completed Form
               </a>
               <Button variant="default" size="lg" className="mt-4 w-full">
                 <Phone className="w-4 h-4 mr-2" />
