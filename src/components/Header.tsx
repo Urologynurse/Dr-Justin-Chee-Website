@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, FileText, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, FileText, ChevronDown, User } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,7 +57,17 @@ const Header = () => {
                   <ChevronDown className="w-3 h-3 ml-1" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
+              <DropdownMenuContent align="end" className="bg-popover z-50">
+                <DropdownMenuItem asChild>
+                  <a
+                    href="/about-dr-chee"
+                    className="flex items-center gap-2 cursor-pointer"
+                  >
+                    <User className="w-4 h-4" />
+                    About Dr Chee
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <a
                     href="/Patient_Registration_Form.pdf"
