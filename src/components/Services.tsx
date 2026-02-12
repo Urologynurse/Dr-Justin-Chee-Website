@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const symptoms = [
@@ -50,7 +51,15 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="h-1 w-16 bg-gradient-to-r from-teal to-navy mb-6 group-hover:w-24 transition-all duration-300" />
-                <h4 className="text-xl font-serif text-foreground mb-3">{specialty.title}</h4>
+                <h4 className="text-xl font-serif text-foreground mb-3">
+                  {specialty.title === "Urethral Strictures" ? (
+                    <Link to="/urethral-strictures" className="hover:text-teal transition-colors underline underline-offset-4 decoration-teal/40 hover:decoration-teal">
+                      {specialty.title}
+                    </Link>
+                  ) : (
+                    specialty.title
+                  )}
+                </h4>
                 <p className="text-muted-foreground text-sm mb-4">{specialty.description}</p>
                 <ul className="space-y-2">
                   {specialty.treatments.map((treatment) => (
