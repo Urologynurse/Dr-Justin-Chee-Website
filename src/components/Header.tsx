@@ -19,15 +19,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const navLinks = [{
-    href: "#about",
-    label: "About"
-  }, {
-    href: "#services",
-    label: "Services"
-  }, {
-    href: "#specialties",
-    label: "Specialties"
-  }, {
     href: "#contact",
     label: "Contact"
   }];
@@ -77,6 +68,18 @@ const Header = () => {
                   >
                     <FileText className="w-4 h-4" />
                     Patient Registration Form
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <a
+                    href="/Personal_details_form.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 cursor-pointer"
+                  >
+                    <FileText className="w-4 h-4" />
+                    Personal Details Form
                   </a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
