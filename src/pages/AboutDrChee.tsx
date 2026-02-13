@@ -47,27 +47,23 @@ const AboutDrChee = () => {
 
               <div className="space-y-6 text-foreground/90 leading-relaxed">
                 <p>
-                  Dr Justin Chee is a urological surgeon dedicated to excellence in reconstructive
-                  surgery of the genitourinary system. Dr Chee's special interests include the surgical
-                  management of urethral stricture disease and prosthetic urology including male
-                  urinary incontinence and erectile dysfunction. Renowned for his innovation and
-                  collaboration, Justin takes a multidisciplinary and holistic approach to ensure his
-                  patients achieve the best possible outcome.
+                  Dr Justin Chee is a highly respected urological surgeon specialising in reconstructive urology. Dr Chee's expertise include dealing with complex urethral stricture repair, performing Urethroplasties since 2010, and specialises in dealing with complex cases. He is known for his innovative, collaborative, and multidisciplinary approach, focusing on achieving the best possible outcomes for his patients across Victoria.
                 </p>
 
                 <p>
-                  Dr Chee travelled widely to maximise his technical and clinical skills trained with the
-                  leaders in the field and attended live surgery workshops in India, Italy, Serbia, UK,
-                  Germany, Qatar and the USA. Dr Chee has had the privilege of being both a presenter
-                  and invited speaker at many national and international meetings including both the
-                  AUA and SIU. Dr Chee has performed at live surgery workshops in Australia, India,
-                  Indonesia, Mexico, Kuwait, Turkey and the Solomon Islands.
+                  After completing his medical degree at the University of Melbourne in 1997, Dr Chee undertook specialist urology training and was awarded Fellowship of the Royal Australasian College of Surgeons (FRACS) in 2011. He has since pursued advanced training internationally, learning from world leaders in reconstructive urology and participating in live surgical workshops across Europe, Asia, the Middle East, Australia, and the United States.
                 </p>
 
                 <p>
-                  Dr Chee is founding faculty of International Society of Reconstructive Urology
-                  (ISORU) and is the current Leader, Special Advisory Group, Reconstruction &amp;
-                  Paediatric Urology, Urological Society of Australia and New Zealand (USANZ).
+                  Dr Chee has been an invited speaker and presenter at numerous national and international conferences, including the AUA and SIU, and has performed in live surgical workshops around the world. He has also served as Visiting Professor at the Detroit Medical Centre (USA) and the University of Belgrade (Serbia).
+                </p>
+
+                <p>
+                  He is a founding faculty member of the International Society of Reconstructive Urology (ISORU) and the immediate past leader of the Special Advisory Group for Reconstruction and Paediatric Urology with the Urological Society of Australia and New Zealand (USANZ).
+                </p>
+
+                <p>
+                  Dr Chee consults at leading Victorian institutions, including Alfred Health and Western Health, and practices privately at Epworth Private Hospital. He also sees private patients at his urology rooms in East Melbourne. Committed to advancing urological care, Dr Chee continues to contribute through education, innovation, and charitable surgical outreach initiatives.
                 </p>
               </div>
             </div>
