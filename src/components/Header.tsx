@@ -107,9 +107,14 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && <nav className="lg:hidden absolute top-full left-0 right-0 glass shadow-card animate-fade-in-up">
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-              {navLinks.map(link => <a key={link.href} href={link.href} className="text-foreground font-medium py-2 hover:text-teal transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                  {link.label}
-                </a>)}
+              <a href="/about-dr-chee" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <User className="w-4 h-4" />
+                About Me - Dr Justin Chee
+              </a>
+              <a href="/post-op-care" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <ClipboardList className="w-4 h-4" />
+                Post Op Care and Instructions
+              </a>
               <a
                 href="/Patient_Registration_Form.pdf"
                 target="_blank"
@@ -119,6 +124,10 @@ const Header = () => {
               >
                 <FileText className="w-4 h-4" />
                 Patient Registration Form
+              </a>
+              <a href="#contact" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <Mail className="w-4 h-4" />
+                Contact
               </a>
               <Button variant="default" size="lg" className="mt-4 w-full">
                 <Phone className="w-4 h-4 mr-2" />
