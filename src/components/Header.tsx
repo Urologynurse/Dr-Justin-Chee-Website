@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, FileText, ChevronDown, User } from "lucide-react";
+import { Menu, X, Phone, FileText, ChevronDown, User, ClipboardList, Mail } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -43,8 +43,8 @@ const Header = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant={isScrolled ? "outline" : "heroOutline"} size="default" className="ml-2">
-                  <FileText className="w-4 h-4 mr-2" />
-                  Patient Forms
+                  <Menu className="w-4 h-4 mr-2" />
+                  Menu
                   <ChevronDown className="w-3 h-3 ml-1" />
                 </Button>
               </DropdownMenuTrigger>
@@ -55,7 +55,17 @@ const Header = () => {
                     className="flex items-center gap-2 cursor-pointer"
                   >
                     <User className="w-4 h-4" />
-                    About Dr Chee
+                    About Me - Dr Justin Chee
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <a
+                    href="/post-op-care"
+                    className="flex items-center gap-2 cursor-pointer"
+                  >
+                    <ClipboardList className="w-4 h-4" />
+                    Post Op Care and Instructions
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
@@ -73,13 +83,11 @@ const Header = () => {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <a
-                    href="/Personal_details_form.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#contact"
                     className="flex items-center gap-2 cursor-pointer"
                   >
-                    <FileText className="w-4 h-4" />
-                    Personal Details Form
+                    <Mail className="w-4 h-4" />
+                    Contact
                   </a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
