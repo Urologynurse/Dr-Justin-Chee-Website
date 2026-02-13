@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import drJustinChee from "@/assets/dr-justin-chee.jpg";
+import drJustinCheeSurgery from "@/assets/dr-justin-chee-surgery.jpeg";
 
 const AboutDrChee = () => {
   return (
@@ -35,6 +36,11 @@ const AboutDrChee = () => {
                 src={drJustinChee}
                 alt="Dr Justin Chee"
                 className="w-full rounded-2xl shadow-card object-cover aspect-[3/4]"
+              />
+              <img
+                src={drJustinCheeSurgery}
+                alt="Dr Justin Chee performing surgery"
+                className="w-full rounded-2xl shadow-card object-cover aspect-[4/3] mt-6"
               />
             </div>
             <div className="md:w-2/3">
