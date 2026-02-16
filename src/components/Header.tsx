@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, FileText, ChevronDown, User, ClipboardList, Mail } from "lucide-react";
+import { Menu, X, Phone, FileText, ChevronDown, User, ClipboardList, Mail, Stethoscope } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -71,6 +71,16 @@ const Header = () => {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <a
+                    href="/preoperative-care"
+                    className="flex items-center gap-2 cursor-pointer"
+                  >
+                    <Stethoscope className="w-4 h-4" />
+                    Preoperative Care
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <a
                     href="/Patient_Registration_Form.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -114,6 +124,10 @@ const Header = () => {
               <a href="/post-op-care" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <ClipboardList className="w-4 h-4" />
                 Post Op Care and Instructions
+              </a>
+              <a href="/preoperative-care" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <Stethoscope className="w-4 h-4" />
+                Preoperative Care
               </a>
               <a
                 href="/Patient_Registration_Form.pdf"
