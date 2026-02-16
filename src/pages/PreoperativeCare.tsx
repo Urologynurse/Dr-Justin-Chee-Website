@@ -41,7 +41,8 @@ const PreoperativeCare = () => {
             Preoperative Care
           </h1>
           <p className="text-muted-foreground mb-10 text-lg">
-            Please complete the following patient medication form prior to your appointment.
+            Please complete the following patient medication form once scheduled for your surgery or as directed by Dr Justin's Chee team. Any issues please email{" "}
+            <a href="mailto:nurse@drjustinchee.com" className="text-primary underline hover:text-primary/80">nurse@drjustinchee.com</a>.
           </p>
 
           <Card className="border border-border shadow-card">
