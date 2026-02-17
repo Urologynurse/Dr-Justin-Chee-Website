@@ -7,11 +7,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const PreoperativeCare = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,12 +25,32 @@ const PreoperativeCare = () => {
     allMedications: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Form Submitted",
-      description: "Your preoperative medication details have been submitted.",
-    });
+    setIsSubmitting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-preop-form", {
+        body: form,
+      });
+      if (error) throw error;
+      toast({
+        title: "Form Submitted",
+        description: "Your preoperative medication details have been sent to the nurse.",
+      });
+      setForm({
+        name: "", email: "", allergies: "", bloodThinners: "",
+        bloodThinnersList: "", diabetic: "", ozempic: "", allMedications: "",
+      });
+    } catch (err) {
+      console.error("Submit error:", err);
+      toast({
+        title: "Submission Failed",
+        description: "Something went wrong. Please try again or email nurse@drjustinchee.com directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -195,9 +217,12 @@ const PreoperativeCare = () => {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full mt-4">
-                  Submit
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <Button type="submit" size="lg" className="w-full mt-4" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Submitting...</>
+                  ) : (
+                    <>Submit <ArrowRight className="w-4 h-4 ml-2" /></>
+                  )}
                 </Button>
               </form>
             </CardContent>
