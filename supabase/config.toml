@@ -1,1 +1,4 @@
 project_id = "wcaibmznezscymblmaus"
+
+[functions.send-preop-form]
+verify_jwt = false
