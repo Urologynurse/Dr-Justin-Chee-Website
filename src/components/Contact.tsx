@@ -1,7 +1,43 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowRight, Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+
 const Contact = () => {
-  return <section id="contact" className="py-24 lg:py-32 bg-gradient-subtle">
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    enquiryType: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.enquiryType) {
+      toast({ title: "Please select an enquiry type", variant: "destructive" });
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-enquiry", { body: form });
+      if (error) throw error;
+      toast({ title: "Enquiry Sent", description: "We'll get back to you as soon as possible." });
+      setForm({ firstName: "", lastName: "", email: "", phone: "", enquiryType: "", message: "" });
+    } catch (err) {
+      console.error("Submit error:", err);
+      toast({ title: "Submission Failed", description: "Please try again or email reception@drjustinchee.com directly.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section id="contact" className="py-24 lg:py-32 bg-gradient-subtle">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left - CTA */}
@@ -49,8 +85,6 @@ const Contact = () => {
                   <h4 className="font-medium text-foreground mb-1">Email</h4>
                   <a href="mailto:reception@drjustinchee.com" className="text-muted-foreground hover:text-teal transition-colors">
                     reception@drjustinchee.com or our urology nurse at nurse@drjustinchee.com         
- 
-      
                   </a>
                 </div>
               </div>
@@ -68,25 +102,23 @@ const Contact = () => {
           </div>
 
           {/* Right - Contact Card */}
-          <div className="animate-fade-in-up" style={{
-          animationDelay: "0.2s"
-        }}>
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <div className="bg-card rounded-3xl shadow-elevated p-8 md:p-10">
               <h3 className="text-2xl font-serif text-foreground mb-6">Send an Enquiry</h3>
               
-              <form className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       First Name <span className="text-destructive">*</span>
                     </label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" required />
+                    <input type="text" required value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Last Name <span className="text-destructive">*</span>
                     </label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" required />
+                    <input type="text" required value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" />
                   </div>
                 </div>
 
@@ -94,21 +126,21 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Email Address <span className="text-destructive">*</span>
                   </label>
-                  <input type="email" className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" required />
+                  <input type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Phone (optional)
                   </label>
-                  <input type="tel" className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" />
+                  <input type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     I would like to <span className="text-destructive">*</span>
                   </label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all">
+                  <select required value={form.enquiryType} onChange={(e) => setForm({ ...form, enquiryType: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all">
                     <option value="">Please select</option>
                     <option value="info">Get more information about a treatment</option>
                     <option value="appointment">Book an appointment</option>
@@ -120,18 +152,23 @@ const Contact = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Message (optional)
                   </label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all resize-none" />
+                  <textarea rows={4} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-teal/50 focus:border-teal transition-all resize-none" />
                 </div>
 
-                <Button variant="hero" size="xl" className="w-full group">
-                  Send Enquiry
-                  <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                <Button type="submit" variant="hero" size="xl" className="w-full group" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Sending...</>
+                  ) : (
+                    <>Send Enquiry <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" /></>
+                  )}
                 </Button>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
