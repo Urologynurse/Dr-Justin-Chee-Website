@@ -81,9 +81,7 @@ const Header = () => {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <a
-                    href="/Patient_Registration_Form.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/patient-registration"
                     className="flex items-center gap-2 cursor-pointer"
                   >
                     <FileText className="w-4 h-4" />
@@ -132,9 +130,7 @@ const Header = () => {
                 Preoperative Care
               </a>
               <a
-                href="/Patient_Registration_Form.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/patient-registration"
                 className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
