@@ -84,7 +84,7 @@ const Services = () => {
 
         {/* Other Services */}
         <div className="text-center animate-fade-in-up">
-          <h3 className="text-xl font-serif text-teal-light mb-8">Other Areas of Interest</h3>
+          <h3 className="text-xl font-serif text-teal-light mb-8">Other Speciality Areas Include:</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {otherServices.map((service) => (
               <span
