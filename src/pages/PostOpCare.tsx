@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const PostOpCare = () => {
   const [ippOpen, setIppOpen] = useState(false);
+  const [urethroOpen, setUrethroOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -71,20 +72,23 @@ const PostOpCare = () => {
                   <ChevronDown className="w-5 h-5 text-muted-foreground" />
                 )}
               </button>
-              <a
-                href="/Urethroplasty.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors group"
+              <button
+                onClick={() => setUrethroOpen(!urethroOpen)}
+                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors group text-left"
               >
                 <FileText className="w-8 h-8 text-primary shrink-0 group-hover:text-teal transition-colors" />
-                <div>
+                <div className="flex-1">
                   <span className="font-medium text-foreground group-hover:text-primary transition-colors">
                     Urethroplasty
                   </span>
-                  <p className="text-sm text-muted-foreground">PDF Document</p>
+                  <p className="text-sm text-muted-foreground">View Document</p>
                 </div>
-              </a>
+                {urethroOpen ? (
+                  <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                )}
+              </button>
             </div>
 
             {/* IPP Inline Document */}
@@ -165,6 +169,156 @@ const PostOpCare = () => {
                       <li><strong className="text-foreground">1–3 weeks:</strong> Locate the device, feel for the "inflation pump" and "deflate button"</li>
                       <li>Once happy with progress and healing, we will teach you how to inflate/deflate the device and commence the "Cycling programme"</li>
                       <li>Urology nurse is available on Tuesdays and Fridays to support you in your healing</li>
+                    </ul>
+                  </div>
+
+                  {/* Contacting Us */}
+                  <div className="space-y-4 border-t border-border pt-6">
+                    <h3 className="text-xl font-semibold text-foreground">Contacting Us</h3>
+                    <div className="grid gap-4 sm:grid-cols-3">
+                      <div className="space-y-1">
+                        <p className="font-medium text-foreground">Nurses Contact</p>
+                        <a href="mailto:nurse@drjustinchee.com" className="text-primary hover:underline text-sm">
+                          nurse@drjustinchee.com
+                        </a>
+                        <p className="text-sm text-muted-foreground">Available Tue &amp; Fri</p>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-medium text-foreground">Reception</p>
+                        <a href="mailto:reception@drjustinchee.com" className="text-primary hover:underline text-sm">
+                          reception@drjustinchee.com
+                        </a>
+                        <p className="text-sm text-muted-foreground">
+                          <a href="tel:90885138" className="text-primary hover:underline">9088 5138</a>
+                          {" "}· Tue–Fri 9:00–16:30
+                        </p>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-medium text-foreground">Pager Service</p>
+                        <a href="tel:0386796579" className="text-primary hover:underline text-sm">
+                          03 8679 6579
+                        </a>
+                        <p className="text-sm text-muted-foreground">URGENT matters only, non-business hours</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Urethroplasty Inline Document */}
+            {urethroOpen && (
+              <Card className="mb-8 animate-fade-in-up">
+                <CardContent className="p-6 md:p-8 space-y-8">
+                  <h2 className="text-2xl font-bold text-foreground">
+                    Urethroplasty – What Do I Need to Know?
+                  </h2>
+
+                  {/* What to Expect */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">What to Expect</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li><strong className="text-foreground">Length of stay:</strong> 3-Day, 2-Night</li>
+                      <li>Dr Chee will visit you daily</li>
+                      <li>Catheter (IDC) stays in bladder until 4 weeks after surgery</li>
+                      <li>Day 1 – outer supportive dressing will be removed</li>
+                      <li>Get out of bed / walk around / shower after Dr Chee has reviewed</li>
+                      <li>You will be educated to use a leg bag</li>
+                    </ul>
+                  </div>
+
+                  {/* Mouth Wound Care */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Mouth Wound Care</h3>
+                    <p className="text-sm text-muted-foreground italic">If your operation required a Buccal Mucosa Graft (BMG)</p>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>Avoid hard-to-chew food (e.g. steak, hamburgers)</li>
+                      <li>Stitches are dissolvable – avoid touching or pulling</li>
+                      <li>If stitches come apart or break, don't be alarmed; try to limit degree of mouth opening</li>
+                      <li>May gargle with warm salt water twice a day</li>
+                    </ul>
+                  </div>
+
+                  {/* Perineal Wound Care */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Perineal Wound Care</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>Dressing is waterproof</li>
+                      <li>Pat dry with clean towel after shower to avoid rubbing off</li>
+                      <li>Please remove dressing in the shower 1 day prior to your post-op appointment (7–10 days after)</li>
+                    </ul>
+                  </div>
+
+                  {/* Catheter Care */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Catheter (IDC) Care</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>IDC always taped onto abdomen with Mefix</li>
+                      <li>Reapply every day after shower</li>
+                      <li><strong className="text-foreground">Leg bag:</strong> Attach to thigh, empty regularly, change weekly</li>
+                      <li><strong className="text-foreground">Night bag:</strong> Put on floor when sleeping</li>
+                      <li>Your nurse will show you how to care for the IDC before discharge</li>
+                    </ul>
+                  </div>
+
+                  {/* Medications */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Medications</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>Regular pain relief will be given in hospital; you can ask for more if needed</li>
+                      <li>Adequate pain relief will be given for discharge</li>
+                      <li>Common side effect: constipation</li>
+                      <li>Antibiotics for 5 days</li>
+                      <li>Important to take laxatives (Coloxyl / Lactulose – available over the counter), prunes or pears to keep stool soft</li>
+                    </ul>
+                  </div>
+
+                  {/* Do's and Don'ts */}
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-semibold text-teal">Do's</h3>
+                      <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                        <li>Walk as much as you want / feel comfortable with</li>
+                        <li>Take laxatives if needed</li>
+                        <li>Salt water gargle if there is a mouth wound</li>
+                        <li>Sit leaning backwards instead of upright to avoid pressure on wound</li>
+                        <li>Can sit on a doughnut cushion if needed</li>
+                        <li>Let Dr Chee know if you have increased pain, fever, chills, feeling unwell, or increased bleeding</li>
+                        <li>Ignore erections if they occur – can be painful with IDC in place; take a cool shower or walk around to reduce sensation</li>
+                        <li>Let Dr Chee know if you develop bladder spasm or urine leaking around IDC – medication can be organised</li>
+                      </ul>
+                    </div>
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-semibold text-destructive">Don'ts</h3>
+                      <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                        <li>No lifting more than 10 kg</li>
+                        <li>No strenuous activity for 4–6 weeks after surgery</li>
+                        <li>No driving until IDC removed and pain relief discontinued</li>
+                        <li>No intercourse for 6 weeks</li>
+                        <li>No bike riding for minimum 6 months – no direct pressure to wound</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Follow Up Plan */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Follow Up Plan</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>Appointment booked in rooms around 1 week post discharge for wound review</li>
+                      <li>4 weeks after surgery for IDC removal</li>
+                      <li>4–6 weeks after removal of IDC for flow test and review</li>
+                    </ul>
+                  </div>
+
+                  {/* Material to Take Home */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Material to Take Home</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>4 × leg bags</li>
+                      <li>4 × night bags</li>
+                      <li>4–6 leggy fix</li>
+                      <li>Multiple combines (to wear in underwear when dressing is removed at 1 week)</li>
+                      <li>Multiple strips of Mefix, cut to length for easy application</li>
                     </ul>
                   </div>
 
