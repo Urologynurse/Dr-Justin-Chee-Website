@@ -25,7 +25,7 @@ const Services = () => {
     },
     {
       title: "Post-Surgical Incontinence",
-      treatments: ["Surgical correction", "Rehabilitation programs"],
+      treatments: ["Surgical correction"],
       description: "Treatment for urinary incontinence after prostate surgery",
     },
   ];
