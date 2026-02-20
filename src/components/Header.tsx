@@ -102,10 +102,12 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button variant={isScrolled ? "default" : "heroOutline"} size="lg" className="ml-4">
-              <Phone className="w-4 h-4 mr-2" />
-              Book Consultation
-            </Button>
+            <a href="#contact">
+              <Button variant={isScrolled ? "default" : "heroOutline"} size="lg" className="ml-4">
+                <Phone className="w-4 h-4 mr-2" />
+                Book Consultation
+              </Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -143,10 +145,12 @@ const Header = () => {
                 <Mail className="w-4 h-4" />
                 Contact
               </a>
-              <Button variant="default" size="lg" className="mt-4 w-full">
-                <Phone className="w-4 h-4 mr-2" />
-                Book Consultation
-              </Button>
+              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button variant="default" size="lg" className="mt-4 w-full">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Book Consultation
+                </Button>
+              </a>
             </div>
           </nav>}
       </div>

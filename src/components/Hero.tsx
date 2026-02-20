@@ -44,11 +44,13 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{
           animationDelay: "0.3s"
         }}>
-            <Button variant="hero" size="xl" className="group">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book an Appointment
-              <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <a href="#contact">
+              <Button variant="hero" size="xl" className="group">
+                <Calendar className="w-5 h-5 mr-2" />
+                Book an Appointment
+                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
             <Button variant="heroOutline" size="xl">
               Learn More
             </Button>
