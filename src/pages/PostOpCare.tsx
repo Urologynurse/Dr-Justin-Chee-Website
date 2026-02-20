@@ -1,17 +1,11 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Phone, FileText, AlertTriangle } from "lucide-react";
+import { Phone, FileText, AlertTriangle, ChevronDown, ChevronUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 
 const PostOpCare = () => {
-  const [pdfOpen, setPdfOpen] = useState(false);
+  const [ippOpen, setIppOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -59,18 +53,23 @@ const PostOpCare = () => {
             <h2 className="text-2xl font-semibold text-foreground mb-6">
               Nursing Handouts
             </h2>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 mb-8">
               <button
-                onClick={() => setPdfOpen(true)}
+                onClick={() => setIppOpen(!ippOpen)}
                 className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors group text-left"
               >
                 <FileText className="w-8 h-8 text-primary shrink-0 group-hover:text-teal transition-colors" />
-                <div>
+                <div className="flex-1">
                   <span className="font-medium text-foreground group-hover:text-primary transition-colors">
                     IPP (Inflatable Penile Prosthesis)
                   </span>
-                  <p className="text-sm text-muted-foreground">PDF Document</p>
+                  <p className="text-sm text-muted-foreground">View Document</p>
                 </div>
+                {ippOpen ? (
+                  <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                )}
               </button>
               <a
                 href="/Urethroplasty.pdf"
@@ -87,25 +86,124 @@ const PostOpCare = () => {
                 </div>
               </a>
             </div>
+
+            {/* IPP Inline Document */}
+            {ippOpen && (
+              <Card className="mb-8 animate-fade-in-up">
+                <CardContent className="p-6 md:p-8 space-y-8">
+                  <h2 className="text-2xl font-bold text-foreground">
+                    Inflatable Penile Prosthesis (IPP) – What to Expect
+                  </h2>
+
+                  {/* What to Expect */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">What to Expect</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li><strong className="text-foreground">Length of stay:</strong> 3-Day, 2-Night</li>
+                      <li>Dr Chee will visit you daily in hospital</li>
+                      <li>Catheter (IDC) stays in bladder after surgery; will be removed before discharge home</li>
+                      <li>Get out of bed / walk around / shower after Dr Chee's review Day 1 post surgery</li>
+                      <li>The device will be partially inflated after surgery and will be deflated completely at the post-op review in rooms, 1 week post discharge</li>
+                      <li>Cycling will commence at 3 weeks post op</li>
+                      <li>The device can be used only 6 weeks post op</li>
+                    </ul>
+                  </div>
+
+                  {/* Recovery Time */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Recovery Time</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>Different for everyone</li>
+                      <li>Majority of patients will be uncomfortable / have a degree of pain / swelling for 2 weeks, then gradually improve</li>
+                      <li>Small regular walks, healthy eating, regular water consumption to avoid constipation</li>
+                      <li>No heavy lifting (no more than 10 kg)</li>
+                      <li>No strenuous activity for 6 weeks</li>
+                      <li><strong className="text-foreground">Driving:</strong> No driving until earliest AFTER the initial post-op review in rooms (can be longer)</li>
+                    </ul>
+                  </div>
+
+                  {/* Medications */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Medications</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>Regular pain relief will be given in hospital; you can ask for more if needed</li>
+                      <li>Adequate pain relief will be given for discharge</li>
+                      <li>Antibiotics for 5 days</li>
+                      <li>Constipation is common with some types of analgesia</li>
+                      <li>Important to take laxatives (Coloxyl / Lactulose – available over the counter), prunes or pears to keep stool soft</li>
+                    </ul>
+                  </div>
+
+                  {/* Do's and Don'ts */}
+                  <div className="grid gap-6 md:grid-cols-2">
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-semibold text-teal">Do's</h3>
+                      <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                        <li>Small regular walks</li>
+                        <li>Healthy eating</li>
+                        <li>Regular water consumption / laxative if needed to avoid constipation</li>
+                        <li>Call Dr Chee if signs of infection: persistent pain, fever &gt; 38°C, increase in redness, severe swelling</li>
+                      </ul>
+                    </div>
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-semibold text-destructive">Don'ts</h3>
+                      <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                        <li>No lifting more than 10 kg</li>
+                        <li>No strenuous activity for 6 weeks after surgery</li>
+                        <li>No intercourse for at least 6 weeks post op</li>
+                        <li>No driving until agreed by Dr Chee</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Follow Up Plan */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Follow Up Plan</h3>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>Remove dressings in shower the day prior to first review in rooms</li>
+                      <li><strong className="text-foreground">1 week post discharge:</strong> Assess wound / pain management / deflate the device</li>
+                      <li><strong className="text-foreground">1–3 weeks:</strong> Locate the device, feel for the "inflation pump" and "deflate button"</li>
+                      <li>Once happy with progress and healing, we will teach you how to inflate/deflate the device and commence the "Cycling programme"</li>
+                      <li>Urology nurse is available on Tuesdays and Fridays to support you in your healing</li>
+                    </ul>
+                  </div>
+
+                  {/* Contacting Us */}
+                  <div className="space-y-4 border-t border-border pt-6">
+                    <h3 className="text-xl font-semibold text-foreground">Contacting Us</h3>
+                    <div className="grid gap-4 sm:grid-cols-3">
+                      <div className="space-y-1">
+                        <p className="font-medium text-foreground">Nurses Contact</p>
+                        <a href="mailto:nurse@drjustinchee.com" className="text-primary hover:underline text-sm">
+                          nurse@drjustinchee.com
+                        </a>
+                        <p className="text-sm text-muted-foreground">Available Tue &amp; Fri</p>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-medium text-foreground">Reception</p>
+                        <a href="mailto:reception@drjustinchee.com" className="text-primary hover:underline text-sm">
+                          reception@drjustinchee.com
+                        </a>
+                        <p className="text-sm text-muted-foreground">
+                          <a href="tel:90885138" className="text-primary hover:underline">9088 5138</a>
+                          {" "}· Tue–Fri 9:00–16:30
+                        </p>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-medium text-foreground">Pager Service</p>
+                        <a href="tel:0386796579" className="text-primary hover:underline text-sm">
+                          03 8679 6579
+                        </a>
+                        <p className="text-sm text-muted-foreground">URGENT matters only, non-business hours</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
           </section>
         </div>
       </main>
-
-      {/* IPP PDF Viewer Dialog */}
-      <Dialog open={pdfOpen} onOpenChange={setPdfOpen}>
-        <DialogContent className="max-w-4xl w-[95vw] h-[85vh] flex flex-col p-0">
-          <DialogHeader className="p-6 pb-2">
-            <DialogTitle>IPP (Inflatable Penile Prosthesis)</DialogTitle>
-          </DialogHeader>
-          <div className="flex-1 px-6 pb-6">
-            <iframe
-              src="/IPP.pdf"
-              className="w-full h-full rounded-md border border-border"
-              title="IPP PDF Document"
-            />
-          </div>
-        </DialogContent>
-      </Dialog>
 
       <Footer />
     </div>
