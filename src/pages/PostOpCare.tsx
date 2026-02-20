@@ -1,9 +1,18 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Phone, FileText, AlertTriangle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const PostOpCare = () => {
+  const [pdfOpen, setPdfOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -51,11 +60,9 @@ const PostOpCare = () => {
               Nursing Handouts
             </h2>
             <div className="grid gap-4 sm:grid-cols-2">
-              <a
-                href="/IPP.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors group"
+              <button
+                onClick={() => setPdfOpen(true)}
+                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors group text-left"
               >
                 <FileText className="w-8 h-8 text-primary shrink-0 group-hover:text-teal transition-colors" />
                 <div>
@@ -64,7 +71,7 @@ const PostOpCare = () => {
                   </span>
                   <p className="text-sm text-muted-foreground">PDF Document</p>
                 </div>
-              </a>
+              </button>
               <a
                 href="/Urethroplasty.pdf"
                 target="_blank"
@@ -83,6 +90,22 @@ const PostOpCare = () => {
           </section>
         </div>
       </main>
+
+      {/* IPP PDF Viewer Dialog */}
+      <Dialog open={pdfOpen} onOpenChange={setPdfOpen}>
+        <DialogContent className="max-w-4xl w-[95vw] h-[85vh] flex flex-col p-0">
+          <DialogHeader className="p-6 pb-2">
+            <DialogTitle>IPP (Inflatable Penile Prosthesis)</DialogTitle>
+          </DialogHeader>
+          <div className="flex-1 px-6 pb-6">
+            <iframe
+              src="/IPP.pdf"
+              className="w-full h-full rounded-md border border-border"
+              title="IPP PDF Document"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <Footer />
     </div>
