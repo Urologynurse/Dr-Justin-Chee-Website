@@ -61,11 +61,11 @@ const Header = () => {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <a
-                    href="/post-op-care"
+                    href="/patient-registration"
                     className="flex items-center gap-2 cursor-pointer"
                   >
-                    <ClipboardList className="w-4 h-4" />
-                    Post Op Care and Instructions
+                    <FileText className="w-4 h-4" />
+                    Patient Registration Form
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
@@ -81,11 +81,11 @@ const Header = () => {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <a
-                    href="/patient-registration"
+                    href="/post-op-care"
                     className="flex items-center gap-2 cursor-pointer"
                   >
-                    <FileText className="w-4 h-4" />
-                    Patient Registration Form
+                    <ClipboardList className="w-4 h-4" />
+                    Post Op Care and Instructions
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
@@ -121,21 +121,17 @@ const Header = () => {
                 <User className="w-4 h-4" />
                 About Me - Dr Justin Chee
               </a>
-              <a href="/post-op-care" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                <ClipboardList className="w-4 h-4" />
-                Post Op Care and Instructions
+              <a href="/patient-registration" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <FileText className="w-4 h-4" />
+                Patient Registration Form
               </a>
               <a href="/preoperative-care" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <Stethoscope className="w-4 h-4" />
                 Preoperative Care
               </a>
-              <a
-                href="/patient-registration"
-                className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <FileText className="w-4 h-4" />
-                Patient Registration Form
+              <a href="/post-op-care" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <ClipboardList className="w-4 h-4" />
+                Post Op Care and Instructions
               </a>
               <a href="#contact" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <Mail className="w-4 h-4" />
