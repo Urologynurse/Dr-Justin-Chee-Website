@@ -11,6 +11,7 @@ import PostOpCare from "./pages/PostOpCare";
 import PreoperativeCare from "./pages/PreoperativeCare";
 import NotFound from "./pages/NotFound";
 import PatientRegistration from "./pages/PatientRegistration";
+import PostSurgicalIncontinence from "./pages/PostSurgicalIncontinence";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/post-op-care" element={<PostOpCare />} />
           <Route path="/preoperative-care" element={<PreoperativeCare />} />
           <Route path="/patient-registration" element={<PatientRegistration />} />
+          <Route path="/post-surgical-incontinence" element={<PostSurgicalIncontinence />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
