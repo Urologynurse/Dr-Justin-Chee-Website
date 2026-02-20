@@ -51,9 +51,6 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
-            <Button variant="heroOutline" size="xl">
-              Learn More
-            </Button>
           </div>
 
           {/* Trust Indicators */}
