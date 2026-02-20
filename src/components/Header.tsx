@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, FileText, ChevronDown, User, ClipboardList, Mail, Stethoscope } from "lucide-react";
+import { Menu, X, Phone, FileText, ChevronDown, User, ClipboardList, Mail, Stethoscope, Home } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -49,6 +49,16 @@ const Header = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="bg-popover z-50">
+                <DropdownMenuItem asChild>
+                  <a
+                    href="/"
+                    className="flex items-center gap-2 cursor-pointer"
+                  >
+                    <Home className="w-4 h-4" />
+                    Home
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <a
                     href="/about-dr-chee"
@@ -117,6 +127,10 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && <nav className="lg:hidden absolute top-full left-0 right-0 glass shadow-card animate-fade-in-up">
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
+              <a href="/" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                <Home className="w-4 h-4" />
+                Home
+              </a>
               <a href="/about-dr-chee" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <User className="w-4 h-4" />
                 About Me - Dr Justin Chee
