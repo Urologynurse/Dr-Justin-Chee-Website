@@ -60,6 +60,10 @@ const Services = () => {
                     <Link to="/erectile-dysfunction" className="hover:text-teal transition-colors underline underline-offset-4 decoration-teal/40 hover:decoration-teal">
                       {specialty.title}
                     </Link>
+                  ) : specialty.title === "Post-Surgical Incontinence" ? (
+                    <Link to="/post-surgical-incontinence" className="hover:text-teal transition-colors underline underline-offset-4 decoration-teal/40 hover:decoration-teal">
+                      {specialty.title}
+                    </Link>
                   ) : (
                     specialty.title
                   )}
