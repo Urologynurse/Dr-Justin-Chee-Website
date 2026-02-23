@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const PostOpCare = () => {
   const [ippOpen, setIppOpen] = useState(false);
   const [urethroOpen, setUrethroOpen] = useState(false);
+  const [semenOpen, setSemenOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -54,7 +55,7 @@ const PostOpCare = () => {
             <h2 className="text-2xl font-semibold text-foreground mb-6">
               Nursing Handouts
             </h2>
-            <div className="grid gap-4 sm:grid-cols-2 mb-8">
+            <div className="grid gap-4 sm:grid-cols-3 mb-8">
               <button
                 onClick={() => setIppOpen(!ippOpen)}
                 className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors group text-left"
@@ -84,6 +85,23 @@ const PostOpCare = () => {
                   <p className="text-sm text-muted-foreground">View Document</p>
                 </div>
                 {urethroOpen ? (
+                  <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                )}
+              </button>
+              <button
+                onClick={() => setSemenOpen(!semenOpen)}
+                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors group text-left"
+              >
+                <FileText className="w-8 h-8 text-primary shrink-0 group-hover:text-teal transition-colors" />
+                <div className="flex-1">
+                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                    Semen Analysis
+                  </span>
+                  <p className="text-sm text-muted-foreground">View Document</p>
+                </div>
+                {semenOpen ? (
                   <ChevronUp className="w-5 h-5 text-muted-foreground" />
                 ) : (
                   <ChevronDown className="w-5 h-5 text-muted-foreground" />
@@ -351,6 +369,109 @@ const PostOpCare = () => {
                         <p className="text-sm text-muted-foreground">URGENT matters only, non-business hours</p>
                       </div>
                     </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Semen Analysis Inline Document */}
+            {semenOpen && (
+              <Card className="mb-8 animate-fade-in-up">
+                <CardContent className="p-6 md:p-8 space-y-8">
+                  <h2 className="text-2xl font-bold text-foreground">
+                    Semen &amp; Sperm Antibodies Analysis – Patient Information
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    These instructions are for sperm antibodies and semen analysis for post vasectomy or fertility investigation. Follow these instructions carefully to ensure your test results are accurate and reliable.
+                  </p>
+
+                  {/* Before the Test */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">1. Before the Test</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Ensure you have your pathology referral from your doctor. We cannot accept a specimen without a pathology referral.
+                    </p>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>Obtain a sterile container from your doctor or local Melbourne Pathology collection centre.</li>
+                      <li>For post vasectomy investigation, the specimen should be collected 12 weeks after your operation, after at least 20 ejaculations.</li>
+                      <li>All semen specimens should be collected following an abstinence from all sexual activity of no less than 48 hours and no more than 7 days.</li>
+                    </ul>
+                  </div>
+
+                  {/* Collecting the Specimen */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">2. Collecting the Specimen</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      The specimen is obtained through masturbation directly into the sterile container provided. Do not use other containers, lubricants or a condom. They may contain chemicals which can affect the test result.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Collect the complete ejaculate. If the specimen is incomplete, write a note on the container or request form (e.g. partial specimen only).
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed font-medium text-foreground">
+                      Label the collection container with:
+                    </p>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground leading-relaxed">
+                      <li>Your given name and surname</li>
+                      <li>Your date of birth</li>
+                      <li>Date and time of specimen collection</li>
+                    </ul>
+                  </div>
+
+                  {/* Delivering the Specimen */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">3. Delivering the Specimen</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Your specimen must be produced within 45 minutes before delivery to the Collingwood laboratory. Specimens will only be accepted at these sites and only between the hours listed:
+                    </p>
+                    <div className="bg-muted/50 rounded-lg p-4 space-y-2">
+                      <p className="font-medium text-foreground">Melbourne Pathology – Main Laboratory</p>
+                      <p className="text-muted-foreground text-sm">103 Victoria Parade, Collingwood</p>
+                      <p className="text-muted-foreground text-sm">Monday to Friday only, 8am – 1pm</p>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Keep the specimen at body temperature (e.g. put it in your pocket, close to your body). Deliver the specimen, the request form from your doctor and the completed questionnaire.
+                    </p>
+                    <div className="bg-muted/50 rounded-lg p-4 space-y-2">
+                      <p className="font-medium text-foreground">Collection Room (if more than 45 min away)</p>
+                      <p className="text-muted-foreground text-sm">Melbourne Pathology – 124 Grey St, East Melbourne</p>
+                      <p className="text-muted-foreground text-sm">Monday to Friday, morning only</p>
+                      <p className="text-muted-foreground text-sm">
+                        Ph <a href="tel:94194310" className="text-primary hover:underline">9419 4310</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Fee */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">Fee</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      There is a fee for all semen testing. You can claim part of this back from Medicare.
+                    </p>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      <div className="bg-muted/50 rounded-lg p-3 flex justify-between items-center">
+                        <span className="text-muted-foreground text-sm">Fertility investigation</span>
+                        <span className="font-medium text-foreground">$85</span>
+                      </div>
+                      <div className="bg-muted/50 rounded-lg p-3 flex justify-between items-center">
+                        <span className="text-muted-foreground text-sm">Post vasectomy</span>
+                        <span className="font-medium text-foreground">$45</span>
+                      </div>
+                      <div className="bg-muted/50 rounded-lg p-3 flex justify-between items-center">
+                        <span className="text-muted-foreground text-sm">Post vasectomy reversal</span>
+                        <span className="font-medium text-foreground">$85</span>
+                      </div>
+                      <div className="bg-muted/50 rounded-lg p-3 flex justify-between items-center">
+                        <span className="text-muted-foreground text-sm">Sperm antibodies</span>
+                        <span className="font-medium text-foreground">$85</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Footer */}
+                  <div className="space-y-2 border-t border-border pt-6 text-sm text-muted-foreground">
+                    <p>Semen analysis patient information for Cabrini Hospital Malvern and Bendigo region available at <a href="https://www.mps.com.au" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.mps.com.au</a></p>
+                    <p>Melbourne Pathology ABN 63 074 699 139 · Details correct December 2021</p>
+                    <p>103 Victoria Parade Collingwood, 3066 · Phone <a href="tel:92877700" className="text-primary hover:underline">9287 7700</a></p>
                   </div>
                 </CardContent>
               </Card>
