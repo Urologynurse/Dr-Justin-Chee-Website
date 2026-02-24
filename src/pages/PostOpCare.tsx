@@ -8,6 +8,7 @@ const PostOpCare = () => {
   const [ippOpen, setIppOpen] = useState(false);
   const [urethroOpen, setUrethroOpen] = useState(false);
   const [semenOpen, setSemenOpen] = useState(false);
+  const [ausOpen, setAusOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -55,7 +56,7 @@ const PostOpCare = () => {
             <h2 className="text-2xl font-semibold text-foreground mb-6">
               Nursing Handouts
             </h2>
-            <div className="grid gap-4 sm:grid-cols-3 mb-8">
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 mb-8">
               <button
                 onClick={() => setIppOpen(!ippOpen)}
                 className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors group text-left"
@@ -102,6 +103,23 @@ const PostOpCare = () => {
                   <p className="text-sm text-muted-foreground">View Document</p>
                 </div>
                 {semenOpen ? (
+                  <ChevronUp className="w-5 h-5 text-muted-foreground" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                )}
+              </button>
+              <button
+                onClick={() => setAusOpen(!ausOpen)}
+                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card hover:bg-accent/10 transition-colors group text-left"
+              >
+                <FileText className="w-8 h-8 text-primary shrink-0 group-hover:text-teal transition-colors" />
+                <div className="flex-1">
+                  <span className="font-medium text-foreground group-hover:text-primary transition-colors">
+                    Artificial Urinary Sphincter (AUS)
+                  </span>
+                  <p className="text-sm text-muted-foreground">View Document</p>
+                </div>
+                {ausOpen ? (
                   <ChevronUp className="w-5 h-5 text-muted-foreground" />
                 ) : (
                   <ChevronDown className="w-5 h-5 text-muted-foreground" />
@@ -338,6 +356,89 @@ const PostOpCare = () => {
                       <li>Multiple combines (to wear in underwear when dressing is removed at 1 week)</li>
                       <li>Multiple strips of Mefix, cut to length for easy application</li>
                     </ul>
+                  </div>
+
+                  {/* Contacting Us */}
+                  <div className="space-y-4 border-t border-border pt-6">
+                    <h3 className="text-xl font-semibold text-foreground">Contacting Us</h3>
+                    <div className="grid gap-4 sm:grid-cols-3">
+                      <div className="space-y-1">
+                        <p className="font-medium text-foreground">Nurses Contact</p>
+                        <a href="mailto:nurse@drjustinchee.com" className="text-primary hover:underline text-sm">
+                          nurse@drjustinchee.com
+                        </a>
+                        <p className="text-sm text-muted-foreground">Available Tue &amp; Fri</p>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-medium text-foreground">Reception</p>
+                        <a href="mailto:reception@drjustinchee.com" className="text-primary hover:underline text-sm">
+                          reception@drjustinchee.com
+                        </a>
+                        <p className="text-sm text-muted-foreground">
+                          <a href="tel:90885138" className="text-primary hover:underline">9088 5138</a>
+                          {" "}· Tue–Fri 9:00–16:30
+                        </p>
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-medium text-foreground">Pager Service</p>
+                        <a href="tel:0386796579" className="text-primary hover:underline text-sm">
+                          03 8679 6579
+                        </a>
+                        <p className="text-sm text-muted-foreground">URGENT matters only, non-business hours</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* AUS Inline Document */}
+            {ausOpen && (
+              <Card className="mb-8 animate-fade-in-up">
+                <CardContent className="p-6 md:p-8 space-y-8">
+                  <h2 className="text-2xl font-bold text-foreground">
+                    Artificial Urinary Sphincter (AUS)
+                  </h2>
+
+                  {/* What is an AUS */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">What is an Artificial Sphincter?</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      An Artificial Sphincter is a device that is designed to act like your own urethral sphincter. It controls the exit of urine from your bladder to your urethra.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      The Artificial Sphincter has three parts consisting of a reservoir that sits up in the abdomen, a cuff that's around the urethra, and a control pump located in the scrotum.
+                    </p>
+                  </div>
+
+                  {/* How does it work */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">How Does It Work?</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      A cuff that sits around the urethra aids in improving leakage and incontinence, by keeping the urine inside the bladder like a gate. When your bladder is full and you get the urge to urinate, you can go to the toilet and squeeze the pump located in your scrotum. This forces the cuff to open and allow the urine to flow out (opens the gate). Over the next 2–3 minutes the cuff slowly closes.
+                    </p>
+                  </div>
+
+                  {/* The Procedure */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">The Procedure</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      The insertion of the artificial urinary sphincter is approximately a 2-hour operation in which the reservoir is implanted into the lower abdomen under the muscle layer and filled with a sterile saline solution. The reservoir holds the fluid that is used to fill the balloon that surrounds the urethra. The tubing and cuff are then inserted.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Prior to this procedure you will be instructed to fast for 6 hours. Fasting means nothing to eat or drink. You may also be required to have a blood test and a urine test. Do not shave the pubic area as this can result in the surgery being cancelled due to higher risk of infection.
+                    </p>
+                  </div>
+
+                  {/* Hospital Stay */}
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-foreground">How Long Will I Be in Hospital?</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      The procedure is generally followed by a 2-night, 3-day stay in hospital.
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Over the course of the three days you will be visited every day by the doctor. Each day you will be assessed on your progress and any medication or care will be adjusted to ensure that any needs you have are met.
+                    </p>
                   </div>
 
                   {/* Contacting Us */}
