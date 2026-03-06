@@ -12,6 +12,7 @@ import PreoperativeCare from "./pages/PreoperativeCare";
 import NotFound from "./pages/NotFound";
 import PatientRegistration from "./pages/PatientRegistration";
 import PostSurgicalIncontinence from "./pages/PostSurgicalIncontinence";
+import ScrollToHash from "./components/ScrollToHash";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about-dr-chee" element={<AboutDrChee />} />
