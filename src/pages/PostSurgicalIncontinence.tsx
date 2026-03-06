@@ -14,7 +14,7 @@ const PostSurgicalIncontinence = () => {
             className="inline-flex items-center gap-2 text-teal hover:text-teal-light transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Services
+            Back to Main Specialty Areas
           </Link>
 
           <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-8">
