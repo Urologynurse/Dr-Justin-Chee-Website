@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import drJustinChee from "@/assets/dr-justin-chee.jpg";
 import drJustinCheeSurgery from "@/assets/dr-justin-chee-surgery.jpeg";
+import justinCheeLogo from "@/assets/justin-chee-logo.png";
 
 const AboutDrChee = () => {
   return (
@@ -41,6 +42,11 @@ const AboutDrChee = () => {
                 src={drJustinCheeSurgery}
                 alt="Dr Justin Chee performing surgery"
                 className="w-full rounded-2xl shadow-card object-cover aspect-[4/3] mt-6"
+              />
+              <img
+                src={justinCheeLogo}
+                alt="Justin Chee - Reconstructive Urologist credentials and affiliations"
+                className="w-full mt-6"
               />
             </div>
             <div className="md:w-2/3">
