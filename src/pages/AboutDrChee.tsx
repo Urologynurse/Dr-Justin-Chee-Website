@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import drJustinChee from "@/assets/dr-justin-chee.jpg";
 import drJustinCheeSurgery from "@/assets/dr-justin-chee-surgery.jpeg";
+import justinCheeLogo from "@/assets/justin-chee-logo.png";
 
 const AboutDrChee = () => {
   return (
