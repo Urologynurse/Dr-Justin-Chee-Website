@@ -80,6 +80,47 @@ const AboutDrChee = () => {
               </div>
             </div>
           </div>
+
+          {/* Patient Reviews */}
+          <div className="mt-16 bg-card rounded-3xl shadow-card p-8 md:p-12">
+            <p className="text-teal text-sm tracking-[0.3em] uppercase mb-6 font-medium">
+              Patient Reviews
+            </p>
+            <div className="space-y-8">
+              <blockquote className="border-l-4 border-teal pl-6">
+                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
+                  "Justin Chee is a very professional, approachable, and a knowledgeable surgeon."
+                </p>
+                <div className="flex gap-1 mt-3">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-accent text-lg">★</span>
+                  ))}
+                </div>
+              </blockquote>
+
+              <blockquote className="border-l-4 border-teal pl-6">
+                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
+                  "I highly recommend Dr. Chee and his team to anyone seeking expert medical care."
+                </p>
+                <div className="flex gap-1 mt-3">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-accent text-lg">★</span>
+                  ))}
+                </div>
+              </blockquote>
+
+              <blockquote className="border-l-4 border-teal pl-6">
+                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
+                  "His office staff were very helpful and caring."
+                </p>
+                <div className="flex gap-1 mt-3">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-accent text-lg">★</span>
+                  ))}
+                </div>
+              </blockquote>
+            </div>
+          </div>
         </div>
       </main>
     </div>
