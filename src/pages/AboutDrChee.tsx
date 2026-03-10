@@ -120,6 +120,16 @@ const AboutDrChee = () => {
                 </div>
               </blockquote>
             </div>
+            <div className="mt-8 text-center">
+              <a
+                href="https://www.google.com/search?q=dr+justin+chee+reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-teal hover:text-teal-dark font-medium transition-colors tracking-wide text-sm"
+              >
+                View all Google Reviews →
+              </a>
+            </div>
           </div>
         </div>
       </main>
