@@ -122,7 +122,7 @@ const AboutDrChee = () => {
             </div>
             <div className="mt-8 text-center">
               <a
-                href="https://www.google.com/search?q=dr+justin+chee+reviews"
+                href="https://www.google.com/search?q=Dr+Justin+Chee+Reviews"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-teal hover:text-teal-dark font-medium transition-colors tracking-wide text-sm"
