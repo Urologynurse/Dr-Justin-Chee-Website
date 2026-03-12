@@ -25,7 +25,7 @@ const Hero = () => {
           </p>
 
           {/* Main Title */}
-          <h1 className="text-primary-foreground mb-6 animate-fade-in-up" style={{
+          <h1 className="font-sans text-primary-foreground mb-6 animate-fade-in-up" style={{
           animationDelay: "0.1s"
         }}>
             <span className="block text-4xl md:text-6xl lg:text-7xl font-light tracking-[0.3em] uppercase">Reconstructive</span>
