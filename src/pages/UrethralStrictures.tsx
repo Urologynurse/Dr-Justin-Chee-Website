@@ -36,7 +36,28 @@ const UrethralStrictures = () => {
           </div>
 
           <div className="mt-12 p-8 bg-card rounded-2xl shadow-elevated">
-            <h2 className="text-2xl font-serif text-foreground mb-4">Treatment Options</h2>
+            <p className="text-teal text-sm tracking-[0.3em] uppercase mb-6 font-medium">
+              Experience & Credentials
+            </p>
+            <div className="space-y-8">
+              <blockquote className="border-l-4 border-teal pl-6">
+                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
+                  "Urethroplasty surgery — over 1,000's of cases performed."
+                </p>
+              </blockquote>
+
+              <blockquote className="border-l-4 border-teal pl-6">
+                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
+                  "Highest volume Optilume implanter in Australia."
+                </p>
+              </blockquote>
+            </div>
+          </div>
+
+          <div className="mt-12 p-8 bg-card rounded-2xl shadow-elevated">
+            <p className="text-teal text-sm tracking-[0.3em] uppercase mb-6 font-medium">
+              Treatment Options
+            </p>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span className="h-1.5 w-1.5 rounded-full bg-teal mt-2.5 flex-shrink-0" />
@@ -47,35 +68,6 @@ const UrethralStrictures = () => {
                 <span><strong className="text-foreground">Optilume</strong> — Minimally invasive balloon treatment</span>
               </li>
             </ul>
-          </div>
-
-          <div className="mt-12 p-8 bg-card rounded-2xl shadow-elevated">
-            <p className="text-teal text-sm tracking-[0.3em] uppercase mb-6 font-medium">
-              Experience & Credentials
-            </p>
-            <div className="space-y-8">
-              <blockquote className="border-l-4 border-teal pl-6">
-                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
-                  "Urethroplasty surgery — over 1,000's of cases performed."
-                </p>
-                <div className="flex gap-1 mt-3">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-teal text-lg">★</span>
-                  ))}
-                </div>
-              </blockquote>
-
-              <blockquote className="border-l-4 border-teal pl-6">
-                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
-                  "Highest volume Optilume implanter in Australia."
-                </p>
-                <div className="flex gap-1 mt-3">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-teal text-lg">★</span>
-                  ))}
-                </div>
-              </blockquote>
-            </div>
           </div>
         </div>
       </main>
