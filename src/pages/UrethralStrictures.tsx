@@ -50,9 +50,6 @@ const UrethralStrictures = () => {
           </div>
 
           <div className="mt-12 p-8 bg-card rounded-2xl shadow-elevated">
-            <p className="text-teal text-sm tracking-[0.3em] uppercase mb-6 font-medium">
-              Experience & Credentials
-            </p>
             <div className="space-y-8">
               <blockquote className="border-l-4 border-teal pl-6">
                 <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
