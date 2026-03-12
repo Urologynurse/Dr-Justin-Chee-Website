@@ -98,7 +98,7 @@ const About = () => {
               <p className="text-muted-foreground">F: +61 3 9088 3579</p>
             </div>
             <div>
-              <p className="text-sm text-teal uppercase tracking-wider mb-2">Email</p>
+              <p className="text-sm text-navy-dark uppercase tracking-wider mb-2">Email</p>
               <a href="mailto:reception@drjustinchee.com" className="text-foreground font-medium hover:text-teal transition-colors">
                 reception@drjustinchee.com
               </a>
