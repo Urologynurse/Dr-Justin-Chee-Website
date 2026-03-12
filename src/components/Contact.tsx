@@ -114,7 +114,6 @@ const Contact = () => {
               />
             </div>
           </div>
-          </div>
 
           {/* Right - Contact Card */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
