@@ -45,9 +45,8 @@ const Contact = () => {
             <p className="text-teal text-sm tracking-[0.3em] uppercase mb-4 font-medium">
               Get in Touch
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-foreground mb-6 leading-tight">
-              Book Your
-              <span className="text-gradient block">Consultation Today</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-navy mb-6 leading-tight">
+              Book Your Consultation Today
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               Take the next step towards better health. Dr Chee and his team are here 
