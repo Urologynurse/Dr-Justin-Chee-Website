@@ -88,7 +88,7 @@ const About = () => {
         <div className="mt-20 bg-card rounded-3xl shadow-card p-8 md:p-12 animate-fade-in-up">
           <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
-              <p className="text-sm text-teal uppercase tracking-wider mb-2">Location</p>
+              <p className="text-sm text-navy-dark uppercase tracking-wider mb-2">Location</p>
               <p className="text-foreground font-medium">Suite 2, 140 Clarendon St</p>
               <p className="text-muted-foreground">East Melbourne, VIC 3002</p>
             </div>
