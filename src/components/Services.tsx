@@ -42,7 +42,7 @@ const Services = () => {
       <div className="container mx-auto px-4 md:px-8">
         {/* Main Specialties */}
         <div id="specialties" className="mb-20">
-          <h3 className="text-xl font-serif text-teal-light mb-8 text-center">Main Specialty Areas</h3>
+          <h3 className="text-lg md:text-xl lg:text-2xl font-sans font-light tracking-[0.2em] uppercase text-primary-foreground/50 mb-8 text-center">Main Specialty Areas</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {specialties.map((specialty, index) => (
               <div
@@ -84,7 +84,7 @@ const Services = () => {
 
         {/* Other Services */}
         <div className="animate-fade-in-up max-w-md mx-auto">
-          <h3 className="text-xl font-serif text-teal-light mb-6 text-center">Other Speciality Areas Include:</h3>
+          <h3 className="text-lg md:text-xl lg:text-2xl font-sans font-light tracking-[0.2em] uppercase text-primary-foreground/50 mb-6 text-center">Other Speciality Areas Include:</h3>
           <ul className="space-y-3">
             {otherServices.map((service) => (
               <li
