@@ -22,7 +22,7 @@ const About = () => {
   return <section id="about" className="py-24 lg:py-32 bg-gradient-subtle">
       <div className="container mx-auto px-4 md:px-8">
         <div className="animate-fade-in-up">
-          <p className="text-teal text-sm tracking-[0.3em] uppercase mb-4 font-medium">
+          <p className="text-navy-dark text-sm tracking-[0.3em] uppercase mb-4 font-medium">
             About Dr Chee
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-foreground mb-6 leading-tight">
