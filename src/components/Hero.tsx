@@ -25,11 +25,11 @@ const Hero = () => {
           </p>
 
           {/* Main Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-light tracking-[0.2em] text-primary-foreground mb-6 animate-fade-in-up" style={{
+          <h1 className="text-primary-foreground mb-6 animate-fade-in-up" style={{
           animationDelay: "0.1s"
         }}>
-            RECONSTRUCTIVE
-            <span className="block mt-2 text-teal-light font-bold">UROLOGY</span>
+            <span className="block text-4xl md:text-6xl lg:text-7xl font-light tracking-[0.3em] uppercase">Reconstructive</span>
+            <span className="block mt-2 text-4xl md:text-6xl lg:text-7xl tracking-[0.3em] uppercase text-teal-light font-bold">Urology</span>
           </h1>
 
           {/* Description */}
