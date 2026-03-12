@@ -51,7 +51,7 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="h-1 w-16 bg-gradient-to-r from-teal to-navy mb-6 group-hover:w-24 transition-all duration-300" />
-                <h4 className="text-lg font-sans font-light tracking-[0.15em] uppercase text-foreground/50 mb-3">
+                <h4 className="text-xl font-serif text-foreground mb-3">
                   {specialty.title === "Urethral Strictures" ? (
                     <Link to="/urethral-strictures" className="hover:text-teal transition-colors underline underline-offset-4 decoration-teal/40 hover:decoration-teal">
                       {specialty.title}
