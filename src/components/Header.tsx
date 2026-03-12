@@ -149,7 +149,7 @@ const Header = () => {
               </a>
               <a href="#contact" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <Mail className="w-4 h-4" />
-                Contact
+                Contact/Location
               </a>
               <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button variant="default" size="lg" className="mt-4 w-full">
