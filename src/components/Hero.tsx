@@ -58,7 +58,7 @@ const Hero = () => {
           animationDelay: "0.4s"
         }}>
             <div className="flex flex-col items-center">
-              <span className="text-3xl font-serif text-teal-light">20+</span>
+              <span className="text-3xl font-serif text-teal-light">15+</span>
               <span className="text-sm tracking-wide">Years Experience</span>
             </div>
             <div className="w-px h-12 bg-primary-foreground/20 hidden sm:block" />
