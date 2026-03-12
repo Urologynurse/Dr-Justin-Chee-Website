@@ -36,6 +36,20 @@ const UrethralStrictures = () => {
           </div>
 
           <div className="mt-12 p-8 bg-card rounded-2xl shadow-elevated">
+            <h2 className="text-2xl font-serif text-foreground mb-4">Treatment Options</h2>
+            <ul className="space-y-3 text-muted-foreground">
+              <li className="flex items-start gap-3">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal mt-2.5 flex-shrink-0" />
+                <span><strong className="text-foreground">Urethroplasty</strong> — Advanced surgical repair of urethral narrowing</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal mt-2.5 flex-shrink-0" />
+                <span><strong className="text-foreground">Optilume</strong> — Minimally invasive balloon treatment</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mt-12 p-8 bg-card rounded-2xl shadow-elevated">
             <p className="text-teal text-sm tracking-[0.3em] uppercase mb-6 font-medium">
               Experience & Credentials
             </p>
@@ -62,20 +76,6 @@ const UrethralStrictures = () => {
                 </div>
               </blockquote>
             </div>
-          </div>
-
-          <div className="mt-12 p-8 bg-card rounded-2xl shadow-elevated">
-            <h2 className="text-2xl font-serif text-foreground mb-4">Treatment Options</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li className="flex items-start gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-teal mt-2.5 flex-shrink-0" />
-                <span><strong className="text-foreground">Urethroplasty</strong> — Advanced surgical repair of urethral narrowing</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-teal mt-2.5 flex-shrink-0" />
-                <span><strong className="text-foreground">Optilume</strong> — Minimally invasive balloon treatment</span>
-              </li>
-            </ul>
           </div>
         </div>
       </main>
