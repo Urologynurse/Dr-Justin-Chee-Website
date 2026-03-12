@@ -43,11 +43,6 @@ const AboutDrChee = () => {
                 alt="Dr Justin Chee performing surgery"
                 className="w-full rounded-2xl shadow-card object-cover aspect-[4/3] mt-6"
               />
-              <img
-                src={justinCheeLogo}
-                alt="Justin Chee - Reconstructive Urologist credentials and affiliations"
-                className="w-full mt-6"
-              />
             </div>
             <div className="md:w-2/3">
               <h1 className="text-3xl md:text-4xl font-light text-foreground mb-2">
