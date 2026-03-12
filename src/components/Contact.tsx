@@ -102,7 +102,7 @@ const Contact = () => {
             {/* Small Map */}
             <div className="relative rounded-2xl overflow-hidden shadow-card border border-border h-48">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1575.8!2d144.9825!3d-37.8125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b6c8e5e8a1%3A0x1c045678a4f0e2d0!2sDr+Justin+Chee!5e0!3m2!1sen!2sau!4v1700000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.5!2d144.9785!3d-37.8118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b8b8b8b8b9%3A0x0!2s140+Clarendon+St%2C+East+Melbourne+VIC+3002!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau&q=Suite+2,+140+Clarendon+St,+East+Melbourne+VIC+3002"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
