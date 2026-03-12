@@ -52,12 +52,12 @@ const UrethralStrictures = () => {
           <div className="mt-12 p-8 bg-card rounded-2xl shadow-elevated">
             <div className="space-y-8">
               <blockquote className="border-l-4 border-teal pl-6">
-                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
+                <p className="font-serif text-base md:text-lg text-foreground/90 italic leading-relaxed">
                   "Urethroplasty surgery — over 1,000's of cases performed."
                 </p>
               </blockquote>
               <blockquote className="border-l-4 border-teal pl-6">
-                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
+                <p className="font-serif text-base md:text-lg text-foreground/90 italic leading-relaxed">
                   "Highest volume Optilume implanter in Australia."
                 </p>
               </blockquote>
