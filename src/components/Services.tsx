@@ -42,7 +42,7 @@ const Services = () => {
       <div className="container mx-auto px-4 md:px-8">
         {/* Main Specialties */}
         <div id="specialties" className="mb-20">
-          <h3 className="text-xl font-serif text-teal-light mb-8 text-center">Main Specialty Areas</h3>
+          <h3 className="text-lg font-sans font-light tracking-[0.2em] uppercase text-primary-foreground/40 mb-8 text-center">Main Specialty Areas</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {specialties.map((specialty, index) => (
               <div
