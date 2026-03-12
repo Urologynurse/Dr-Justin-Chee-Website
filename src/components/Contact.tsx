@@ -112,7 +112,7 @@ const Contact = () => {
                 title="Dr Justin Chee Location - East Melbourne"
               />
               <a
-                href="https://www.google.com/maps/place/Dr+Justin+Chee/@-37.8125,144.9825,17z"
+                href="https://www.google.com/maps/search/?api=1&query=Suite+2,+140+Clarendon+St,+East+Melbourne+VIC+3002"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute inset-0 z-10"
