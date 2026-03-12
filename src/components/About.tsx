@@ -8,7 +8,7 @@ const About = () => {
     description: "Advanced training in reconstructive urology"
   }, {
     icon: Award,
-    title: "Board Certified",
+    title: "FRACS Certified",
     description: "Specialist urological surgeon"
   }, {
     icon: Shield,
