@@ -28,8 +28,8 @@ const Hero = () => {
           <h1 className="font-sans text-primary-foreground mb-6 animate-fade-in-up" style={{
           animationDelay: "0.1s"
         }}>
-            <span className="block text-4xl md:text-6xl lg:text-7xl font-light tracking-[0.3em] uppercase">Reconstructive</span>
-            <span className="block mt-2 text-4xl md:text-6xl lg:text-7xl tracking-[0.3em] uppercase text-teal-light font-bold">Urology</span>
+            <span className="block text-2xl md:text-4xl lg:text-5xl font-light tracking-[0.3em] uppercase">Reconstructive</span>
+            <span className="block mt-2 text-2xl md:text-4xl lg:text-5xl tracking-[0.3em] uppercase text-teal-light font-bold">Urology</span>
           </h1>
 
           {/* Description */}
