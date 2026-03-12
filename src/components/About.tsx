@@ -93,7 +93,7 @@ const About = () => {
               <p className="text-muted-foreground">East Melbourne, VIC 3002</p>
             </div>
             <div>
-              <p className="text-sm text-teal uppercase tracking-wider mb-2">Contact</p>
+              <p className="text-sm text-navy-dark uppercase tracking-wider mb-2">Contact</p>
               <p className="text-foreground font-medium">P: +61 3 9088 5138</p>
               <p className="text-muted-foreground">F: +61 3 9088 3579</p>
             </div>
