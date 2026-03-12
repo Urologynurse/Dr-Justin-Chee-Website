@@ -91,7 +91,7 @@ const Services = () => {
                 key={service}
                 className="flex items-center text-primary-foreground text-sm"
               >
-                <span className="w-2 h-2 rounded-full bg-teal mr-3 flex-shrink-0" />
+                <ArrowRight className="w-4 h-4 text-teal mr-2 flex-shrink-0" />
                 {service}
               </li>
             ))}
