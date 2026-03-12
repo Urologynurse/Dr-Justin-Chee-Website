@@ -105,7 +105,7 @@ const Header = () => {
                     className="flex items-center gap-2 cursor-pointer"
                   >
                     <Mail className="w-4 h-4" />
-                    Contact
+                    Contact/Location
                   </a>
                 </DropdownMenuItem>
               </DropdownMenuContent>
