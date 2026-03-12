@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Subtitle */}
           <p className="text-teal-light text-sm md:text-base tracking-[0.3em] uppercase mb-6 animate-fade-in-up font-medium">
-            Specialist Surgeon
+            Specialist Surgeon in
           </p>
 
           {/* Main Title */}
