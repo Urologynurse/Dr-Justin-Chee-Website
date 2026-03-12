@@ -25,9 +25,9 @@ const About = () => {
           <p className="text-navy-dark text-sm tracking-[0.3em] uppercase mb-4 font-medium">
             About Dr Chee
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-foreground mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-navy/30 mb-6 leading-tight font-normal">
             Dedicated to Restoring
-            <span className="text-gradient block">Quality of Life</span>
+            <span className="block">Quality of Life</span>
           </h2>
           
           {/* Text with inline photo */}
