@@ -57,7 +57,7 @@ const UrethralStrictures = () => {
                 </p>
               </blockquote>
               <blockquote className="border-l-4 border-teal pl-6">
-                <p className="font-serif text-lg md:text-xl text-foreground/90 italic leading-relaxed">
+                <p className="font-serif text-base md:text-lg text-foreground/90 italic leading-relaxed">
                   "Highest volume Optilume implanter in Australia."
                 </p>
               </blockquote>
