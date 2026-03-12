@@ -34,7 +34,7 @@ const About = () => {
             <div className="space-y-4 text-muted-foreground leading-relaxed flex-1">
               <p>
                 Dr Justin Chee is a specialist reconstructive urologist based in East Melbourne, 
-                Victoria. With over two decades of experience, he is committed to providing 
+                Victoria. With over 15 plus years of experience, he is committed to providing 
                 expert care for complex urological conditions.
               </p>
               <p>
