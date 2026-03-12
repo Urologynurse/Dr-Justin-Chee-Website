@@ -100,18 +100,18 @@ const Contact = () => {
             </div>
 
             {/* Small Map */}
-            <div className="rounded-2xl overflow-hidden shadow-card border border-border h-48">
+            <a href="https://www.google.com/maps/place/Dr+Justin+Chee/@-37.8125,144.9825,17z" target="_blank" rel="noopener noreferrer" className="block rounded-2xl overflow-hidden shadow-card border border-border h-48 cursor-pointer">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1575.8!2d144.9825!3d-37.8125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b6c8e5e8a1%3A0x1c045678a4f0e2d0!2sDr+Justin+Chee!5e0!3m2!1sen!2sau!4v1700000000000"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
+                style={{ border: 0, pointerEvents: "none" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Dr Justin Chee Location - East Melbourne"
               />
-            </div>
+            </a>
           </div>
 
           {/* Right - Contact Card */}
