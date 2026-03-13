@@ -32,20 +32,26 @@ const PostOpCare = () => {
                 <div className="flex items-start gap-3">
                   <AlertTriangle className="w-6 h-6 text-destructive shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2 flex items-center gap-2">
-                      Urgent After Pager Service
+                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                      Urgent Care
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      If you require urgent care please attend your closest emergency department. During office hours please call clinic, after hours urgent matters can be contacted on the pager service{" "}
                       <a
                         href="tel:0386796579"
-                        className="text-primary hover:underline flex items-center gap-1"
+                        className="text-primary hover:underline inline-flex items-center gap-1"
                       >
                         <Phone className="w-4 h-4" />
                         03 8679 6579
                       </a>
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Please only use this pager service to contact Dr Chee if of an urgent nature
-                      and you are currently a patient of Dr Justin Chee who has undergone recent
-                      surgery. All non-urgent matters please contact the rooms during office hours.
+                      . All non-urgent matters can you please contact the rooms, leave a message or send an email to{" "}
+                      <a
+                        href="mailto:reception@drjustinchee.com"
+                        className="text-primary hover:underline"
+                      >
+                        reception@drjustinchee.com
+                      </a>{" "}
+                      and we will get back to you during business hours.
                     </p>
                   </div>
                 </div>
