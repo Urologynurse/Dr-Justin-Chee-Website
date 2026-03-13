@@ -130,7 +130,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className={`lg:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className={`lg:hidden p-2 rounded-lg transition-colors ${isSubPage || isScrolled ? "text-foreground" : "text-primary-foreground"}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
