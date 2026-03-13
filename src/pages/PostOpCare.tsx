@@ -36,7 +36,7 @@ const PostOpCare = () => {
                       Need to Contact Us?
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      If you require urgent care please attend your closest emergency department. During office hours please call clinic, after hours urgent matters can be contacted via the pager service{" "}
+                      If you require urgent medical attention, please attend your nearest emergency department. During office hours, please contact the clinic directly. For urgent matters after hours, contact Dr Chee via the pager service on{" "}
                       <a
                         href="tel:0386796579"
                         className="text-primary hover:underline inline-flex items-center gap-1"
@@ -44,14 +44,17 @@ const PostOpCare = () => {
                         <Phone className="w-4 h-4" />
                         03 8679 6579
                       </a>
-                      . All non-urgent matters can you please contact the rooms, leave a message or send an email to{" "}
+                      .
+                    </p>
+                    <p className="text-muted-foreground leading-relaxed mt-3">
+                      For all non-urgent enquiries, please contact the clinic, leave a message, or email{" "}
                       <a
                         href="mailto:reception@drjustinchee.com"
                         className="text-primary hover:underline"
                       >
                         reception@drjustinchee.com
-                      </a>{" "}
-                      and we will get back to you during business hours.
+                      </a>
+                      . Our team will respond during business hours.
                     </p>
                   </div>
                 </div>
