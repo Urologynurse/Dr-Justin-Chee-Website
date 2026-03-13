@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
 import drJustinChee from "@/assets/dr-justin-chee.jpg";
 import drJustinCheeSurgery from "@/assets/dr-justin-chee-surgery.jpeg";
 
@@ -8,25 +6,7 @@ import drJustinCheeSurgery from "@/assets/dr-justin-chee-surgery.jpeg";
 const AboutDrChee = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header Bar */}
-      <header className="fixed top-0 left-0 right-0 z-50 glass shadow-soft py-3">
-        <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-          <Link to="/" className="flex flex-col group">
-            <span className="text-xl md:text-2xl tracking-[0.2em] font-light text-foreground">
-              DR JUSTIN<span className="font-bold text-navy">CHEE</span>
-            </span>
-            <span className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-muted-foreground">
-              Reconstructive Urologist
-            </span>
-          </Link>
-          <Button variant="outline" asChild>
-            <Link to="/">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Link>
-          </Button>
-        </div>
-      </header>
+      <Header />
 
       {/* Content */}
       <main className="pt-32 pb-20">
