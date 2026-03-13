@@ -83,7 +83,7 @@ const Services = () => {
         </div>
 
         {/* Other Services */}
-        <div className="animate-fade-in-up max-w-md mx-auto">
+        <div className="animate-fade-in-up max-w-2xl mx-auto">
           <h3 className="text-lg md:text-xl lg:text-2xl font-sans font-light tracking-[0.2em] uppercase text-primary-foreground/50 mb-6 text-center">Other Speciality Areas Include:</h3>
           <ul className="grid grid-cols-2 gap-3">
             {otherServices.map((service) => (
