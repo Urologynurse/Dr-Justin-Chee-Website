@@ -129,10 +129,20 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button className={`lg:hidden p-2 rounded-lg transition-colors ${isSubPage || isScrolled ? "text-foreground" : "text-primary-foreground"}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Back to Home + Menu Button */}
+          <div className="lg:hidden flex items-center gap-2">
+            {isSubPage && (
+              <a href="/">
+                <Button variant="outline" size="sm">
+                  <ArrowLeft className="w-4 h-4 mr-1" />
+                  Back to Home
+                </Button>
+              </a>
+            )}
+            <button className={`p-2 rounded-lg transition-colors ${isSubPage || isScrolled ? "text-foreground" : "text-primary-foreground"}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
