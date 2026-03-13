@@ -102,7 +102,7 @@ const Contact = () => {
             {/* Small Map */}
             <div className="relative rounded-2xl overflow-hidden shadow-card border border-border h-48">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Suite+2,+140+Clarendon+St,+East+Melbourne+VIC+3002&zoom=16"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=140+Clarendon+Street+East+Melbourne+VIC&zoom=16"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
