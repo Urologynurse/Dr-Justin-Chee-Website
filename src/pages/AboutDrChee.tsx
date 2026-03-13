@@ -46,7 +46,7 @@ const AboutDrChee = () => {
                 </p>
 
                 <p>
-                  He is a founding faculty member of the International Society of Reconstructive Urology (ISORU) and the immediate past leader of the Special Advisory Group for Reconstruction and Paediatric Urology with the Urological Society of Australia and New Zealand (USANZ).
+                  He is a founding faculty member of the International Society of Reconstructive Urology (ISORU) and the immediate past leader of the Special Advisory Group for Reconstruction and Paediatric Urology with the Urological Society of Australia and New Zealand (USANZ). He was also a past board of directors member for the Society of Genitourinary Reconstructive Surgeons (GURS).
                 </p>
 
                 <p>
