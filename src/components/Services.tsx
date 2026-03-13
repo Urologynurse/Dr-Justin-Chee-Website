@@ -85,13 +85,13 @@ const Services = () => {
         {/* Other Services */}
         <div className="animate-fade-in-up max-w-2xl mx-auto">
           <h3 className="text-lg md:text-xl lg:text-2xl font-sans font-light tracking-[0.2em] uppercase text-primary-foreground/50 mb-6 text-center">Other Speciality Areas Include:</h3>
-          <ul className="grid grid-cols-2 gap-3">
+          <ul className="grid grid-cols-2 gap-x-8 gap-y-3 items-start">
             {otherServices.map((service) => (
               <li
                 key={service}
-                className="flex items-center text-primary-foreground text-base"
+                className="flex items-start text-primary-foreground text-base"
               >
-                <ArrowRight className="w-4 h-4 text-teal mr-2 flex-shrink-0" />
+                <ArrowRight className="w-4 h-4 text-teal mr-2 flex-shrink-0 mt-1" />
                 {service}
               </li>
             ))}
