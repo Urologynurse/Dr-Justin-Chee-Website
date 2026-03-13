@@ -33,7 +33,7 @@ const PostOpCare = () => {
                   <AlertTriangle className="w-6 h-6 text-destructive shrink-0 mt-1" />
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">
-                      Urgent Care
+                      Need to Contact Us?
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       If you require urgent care please attend your closest emergency department. During office hours please call clinic, after hours urgent matters can be contacted on the pager service{" "}
