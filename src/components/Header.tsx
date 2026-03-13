@@ -40,7 +40,15 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map(link => <a key={link.href} href={link.href} className={`text-sm font-medium tracking-wide transition-all duration-300 hover:text-teal relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal after:transition-all after:duration-300 hover:after:w-full ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
+            {isSubPage && (
+              <a href="/">
+                <Button variant="outline" size="default">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to Home
+                </Button>
+              </a>
+            )}
+            {navLinks.map(link => <a key={link.href} href={link.href} className={`text-sm font-medium tracking-wide transition-all duration-300 hover:text-teal relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-teal after:transition-all after:duration-300 hover:after:w-full ${isSubPage || isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
                 {link.label}
               </a>)}
             <DropdownMenu>
