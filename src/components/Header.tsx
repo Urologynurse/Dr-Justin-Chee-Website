@@ -30,10 +30,10 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex flex-col group">
-            <span className={`text-xl md:text-2xl tracking-[0.2em] font-light transition-all duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'}`}>
-              DR JUSTIN<span className={`font-bold transition-colors duration-300 ${isScrolled ? 'text-navy' : 'text-teal-light'}`}>CHEE</span>
+            <span className={`text-xl md:text-2xl tracking-[0.2em] font-light transition-all duration-300 ${isSubPage || isScrolled ? 'text-foreground' : 'text-primary-foreground drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]'}`}>
+              DR JUSTIN<span className={`font-bold transition-colors duration-300 ${isSubPage || isScrolled ? 'text-navy' : 'text-teal-light'}`}>CHEE</span>
             </span>
-            <span className={`text-[10px] md:text-xs tracking-[0.25em] uppercase transition-all duration-300 ${isScrolled ? 'text-muted-foreground' : 'text-primary-foreground/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]'}`}>
+            <span className={`text-[10px] md:text-xs tracking-[0.25em] uppercase transition-all duration-300 ${isSubPage || isScrolled ? 'text-muted-foreground' : 'text-primary-foreground/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]'}`}>
               Reconstructive Urologist
             </span>
           </a>
