@@ -25,7 +25,7 @@ const Header = () => {
     href: "#contact",
     label: "Contact/Location"
   }];
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "glass shadow-soft py-3" : "bg-transparent py-5"}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isSubPage || isScrolled ? "glass shadow-soft py-3" : "bg-transparent py-5"}`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
