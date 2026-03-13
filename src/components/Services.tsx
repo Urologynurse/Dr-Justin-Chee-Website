@@ -89,7 +89,7 @@ const Services = () => {
             {otherServices.map((service) => (
               <li
                 key={service}
-                className="flex items-center text-primary-foreground text-sm"
+                className="flex items-center text-primary-foreground text-base"
               >
                 <ArrowRight className="w-4 h-4 text-teal mr-2 flex-shrink-0" />
                 {service}
