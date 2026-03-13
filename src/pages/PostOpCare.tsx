@@ -36,7 +36,7 @@ const PostOpCare = () => {
                       Need to Contact Us?
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      If you require urgent care please attend your closest emergency department. During office hours please call clinic, after hours urgent matters can be contacted on the pager service{" "}
+                      If you require urgent care please attend your closest emergency department. During office hours please call clinic, after hours urgent matters can be contacted via the pager service{" "}
                       <a
                         href="tel:0386796579"
                         className="text-primary hover:underline inline-flex items-center gap-1"
