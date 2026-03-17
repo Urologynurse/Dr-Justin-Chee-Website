@@ -34,7 +34,7 @@ const AboutDrChee = () => {
 
               <div className="space-y-6 text-foreground/90 leading-relaxed">
                 <p>
-                  Dr Justin Chee is a highly respected urological surgeon specialising in reconstructive urology. Dr Chee's expertise include dealing with complex urethral stricture repair, performing Urethroplasties since 2010, and specialises in dealing with complex cases. He is known for his innovative, collaborative, and multidisciplinary approach, focusing on achieving the best possible outcomes for his patients across Victoria.
+                  Dr Justin Chee is a highly respected urological surgeon specialising in reconstructive urology. Dr Chee's expertise include dealing with complex urethral stricture repair, performing Urethroplasties since 2011, and specialises in dealing with complex cases. He is known for his innovative, collaborative, and multidisciplinary approach, focusing on achieving the best possible outcomes for his patients across Victoria.
                 </p>
 
                 <p>
