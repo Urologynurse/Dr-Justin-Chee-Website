@@ -50,7 +50,7 @@ const AboutDrChee = () => {
                 </p>
 
                 <p>
-                  Dr Chee consults at leading Victorian institutions, including Alfred Health and Western Health, and practices privately at Epworth Private Hospital. He also sees private patients at his urology rooms in East Melbourne. Committed to advancing urological care, Dr Chee continues to contribute through education, innovation, and charitable surgical outreach initiatives.
+                  Dr Chee consults at leading Victorian institutions, including Alfred Health and practices privately at Epworth Freemasons Hospital. His practice rooms are located in East Melbourne. Committed to advancing urological care, Dr Chee continues to contribute through education, innovation, and charitable surgical outreach initiatives.
                 </p>
               </div>
             </div>
