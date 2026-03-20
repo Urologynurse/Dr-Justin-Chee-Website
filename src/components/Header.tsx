@@ -149,7 +149,7 @@ const Header = () => {
                 <Home className="w-4 h-4" />
                 Home
               </a>
-              <a href="/#about" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+              <a href="/about-dr-chee" className="text-foreground font-medium py-2 hover:text-teal transition-colors flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                 <User className="w-4 h-4" />
                 About Me - Dr Justin Chee
               </a>
