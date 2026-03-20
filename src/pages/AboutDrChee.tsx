@@ -34,7 +34,7 @@ const AboutDrChee = () => {
 
               <div className="space-y-6 text-foreground/90 leading-relaxed">
                 <p>
-                  Dr Justin Chee is a highly respected urological surgeon specialising in reconstructive urology. Dr Chee's expertise include dealing with complex urethral stricture repair, performing Urethroplasty's since 2010, and specialises in dealing with complex cases.
+                  Dr Justin Chee is a highly respected urological surgeon specialising in reconstructive urology. Dr Chee expertise include dealing with complex urethral stricture repair performing Urthroplasty's since 2011 and specialises in dealing with complex case.
                 </p>
 
                 <p>
@@ -50,11 +50,11 @@ const AboutDrChee = () => {
                 </p>
 
                 <p>
-                  He is a founding faculty member of the International Society of Reconstructive Urology (ISORU) and the immediate past leader of the Special Advisory Group for Reconstruction and Paediatric Urology with the Urological Society of Australia and New Zealand (USANZ).
+                  He is a founding faculty member of the International Society of Reconstructive Urology (ISORU) and the immediate past leader of the Special Advisory Group for Reconstruction and Paediatric Urology with the Urological Society of Australia and New Zealand (USANZ). He was also a past board of directors member for Society of Genitourinary Reconstructive Surgeons (GURS).
                 </p>
 
                 <p>
-                  Dr Chee consults at leading Victorian institutions, including Alfred Health and Western Health, and practices privately at Epworth Private Hospital. He also sees private patients at his urology rooms in East Melbourne. Committed to advancing urological care, Dr Chee continues to contribute through education, innovation, and charitable surgical outreach initiatives.
+                  Dr Chee consults at leading Victorian institutions, including Alfred Health and practices privately at Epworth Freemasons Hospital. His practice rooms are located in East Melbourne. Committed to advancing urological care, Dr Chee continues to contribute through education, innovation, and charitable surgical outreach initiatives.
                 </p>
               </div>
             </div>
