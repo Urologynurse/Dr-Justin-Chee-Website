@@ -69,7 +69,7 @@ const Header = () => {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
                   <a
-                    href="/#about"
+                    href="/about-dr-chee"
                     className="flex items-center gap-2 cursor-pointer"
                   >
                     <User className="w-4 h-4" />
