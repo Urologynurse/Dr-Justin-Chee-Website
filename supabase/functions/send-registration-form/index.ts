@@ -111,7 +111,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "Dr Justin Chee <noreply@drjustinchee.com>",
-        to: ["reception@drjustinchee.com"],
+        to: ["reception@drjustinchee.com", "nurse@drjustinchee.com"],
         subject: `Patient Registration — ${f.title} ${f.givenName} ${f.surname}`,
         html: emailHtml,
         reply_to: f.email,
