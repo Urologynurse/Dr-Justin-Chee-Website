@@ -18,31 +18,28 @@ const ErectileDysfunction = () => {
           </Link>
 
           <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-8">
-            Erectile Dysfunction
+            Advanced Surgical Treatments for Erectile Dysfunction (ED)
           </h1>
-
-          <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
-            <p>
-              Erectile Dysfunction (ED) is a very common condition that affects millions of men worldwide. It can occur at any age and at different stages of a man's life.
-            </p>
-
-            <p>
-              There are several treatment options available to help manage ED and improve both quality of life and sexual function.
-            </p>
-          </div>
 
           <div className="mt-12 space-y-6">
             <div className="p-8 bg-card rounded-2xl shadow-elevated">
-              <h2 className="text-2xl font-serif text-foreground mb-4">Penile Rehabilitation</h2>
+              <h2 className="text-2xl font-serif text-foreground mb-4">Inflatable Penile Prosthesis (IPP)</h2>
               <p className="text-muted-foreground">
-                Designed for men who have undergone surgery, this approach aims to restore erectile function. Treatment may include a combination of oral medications, vacuum erection devices (penile pumps), and injection therapy (intracavernosal injections, ICI).
+                This is a surgical treatment option for men requiring advanced management of erectile dysfunction. An inflatable penile prosthesis (IPP) is a penile implant designed to closely replicate the appearance and function of a natural erection.
               </p>
             </div>
 
             <div className="p-8 bg-card rounded-2xl shadow-elevated">
-              <h2 className="text-2xl font-serif text-foreground mb-4">Inflatable Penile Prosthesis (IPP)</h2>
+              <h2 className="text-2xl font-serif text-foreground mb-4">Intracavernosal Injections (ICI)</h2>
               <p className="text-muted-foreground">
-                This is a surgical option for men who require more advanced treatment for erectile dysfunction. An IPP is a penile implant designed to closely replicate the appearance and function of a natural erection.
+                Intracavernosal injections (ICI) may be a suitable treatment option for men with severe erectile dysfunction. This treatment involves injecting medication directly into the penis to achieve an erection.
+              </p>
+            </div>
+
+            <div className="p-8 bg-card rounded-2xl shadow-elevated">
+              <h2 className="text-2xl font-serif text-foreground mb-4">Penile Rehabilitation Following Radical Prostatectomy</h2>
+              <p className="text-muted-foreground">
+                Designed for men who have undergone radical prostatectomy, penile rehabilitation aims to restore erectile function. Treatment may include a combination of oral medications and vacuum erection devices (penile pumps), tailored to the individual's recovery and needs.
               </p>
             </div>
           </div>
