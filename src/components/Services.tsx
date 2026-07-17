@@ -19,9 +19,9 @@ const Services = () => {
       description: "Advanced surgical repair of urethral narrowing",
     },
     {
-      title: "Erectile Dysfunction",
+      title: "Advanced surgical treatment for Erectile Dysfunction",
       treatments: ["IPP (Inflatable Penile Prosthesis)", "Intracavernosal injection (ICI)", "Post radical prostatectomy penile rehabilitation"],
-      description: "Advanced surgical treatment for Erectile Dysfunction",
+      description: "",
     },
     {
       title: "Post-Surgical Incontinence",
