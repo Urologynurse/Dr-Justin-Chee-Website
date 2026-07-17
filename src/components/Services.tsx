@@ -56,7 +56,7 @@ const Services = () => {
                     <Link to="/urethral-strictures" className="hover:text-teal transition-colors underline underline-offset-4 decoration-teal/40 hover:decoration-teal">
                       {specialty.title}
                     </Link>
-                  ) : specialty.title === "Erectile Dysfunction" ? (
+                  ) : specialty.title === "Advanced surgical treatment for Erectile Dysfunction" ? (
                     <Link to="/erectile-dysfunction" className="hover:text-teal transition-colors underline underline-offset-4 decoration-teal/40 hover:decoration-teal">
                       {specialty.title}
                     </Link>
